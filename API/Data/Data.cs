@@ -16,7 +16,7 @@ namespace API.Data
             try
             {
                 //String de conexão com o BD
-                string strConexao = @"Data Source=DESKTOP-4UB7GNI;
+                string strConexao = @"Data Source=NOTE-TULIO;
                                       Initial Catalog=FreelaTec_bd; 
                                       Integrated Security=True";//Autenticação Windows
                                                                 //User ID=sa; Password=101257240696Tb@; //Autenticação SQL Server

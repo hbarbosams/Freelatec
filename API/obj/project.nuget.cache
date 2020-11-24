@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9QXhkQhdkcF/wjkwssZQ1Tq5AHOUbgL2Ijhx5Azic8WbR+OiBGNj2wjGFoel/8wRXvSayXPy5jMxc8dakXlDZA==",
+  "dgSpecHash": "oGnCizsaOMLAb+HRHQWG/gsbNzMBFrEZNWwOhkuNDbMmBW2/zAYWTxJws9LQuoXPuPZLpqlnbmZtz6FECA74Dw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tulio\\Desktop\\FreelaTec\\API\\API.csproj",
+  "projectFilePath": "c:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tulio\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\tulio\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
