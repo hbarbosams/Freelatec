@@ -1,0 +1,169 @@
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/appsettings.Development.json
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/appsettings.json
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/API
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/API.deps.json
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/API.runtimeconfig.json
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/API.runtimeconfig.dev.json
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/API.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/ref/API.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/API.pdb
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.Data.SqlClient.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.Identity.Client.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Microsoft.OpenApi.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/System.Configuration.ConfigurationManager.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/System.Data.SqlClient.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/System.Runtime.Caching.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/System.Security.Cryptography.ProtectedData.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win-arm64/native/sni.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win-x64/native/sni.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win-x86/native/sni.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+/home/tulioavanco/Documentos/API/bin/Debug/net5.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.csprojAssemblyReference.cache
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.GeneratedMSBuildEditorConfig.editorconfig
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.AssemblyInfoInputs.cache
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.AssemblyInfo.cs
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.csproj.CoreCompileInputs.cache
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.MvcApplicationPartsAssemblyInfo.cs
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.MvcApplicationPartsAssemblyInfo.cache
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/staticwebassets/API.StaticWebAssets.Manifest.cache
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/staticwebassets/API.StaticWebAssets.xml
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/scopedcss/bundle/API.styles.css
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.RazorTargetAssemblyInfo.cache
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.csproj.CopyComplete
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.dll
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/ref/API.dll
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.pdb
+/home/tulioavanco/Documentos/API/obj/Debug/net5.0/API.genruntimeconfig.cache
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\appsettings.json
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\API.exe
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\API.deps.json
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\API.runtimeconfig.json
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\API.runtimeconfig.dev.json
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\API.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\ref\API.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\API.pdb
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\tulio\Desktop\Nova pasta\API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.csprojAssemblyReference.cache
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.AssemblyInfoInputs.cache
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.AssemblyInfo.cs
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.csproj.CoreCompileInputs.cache
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\staticwebassets\API.StaticWebAssets.Manifest.cache
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\staticwebassets\API.StaticWebAssets.xml
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\scopedcss\bundle\API.styles.css
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.RazorTargetAssemblyInfo.cache
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.csproj.CopyComplete
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.dll
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\ref\API.dll
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.pdb
+C:\Users\tulio\Desktop\Nova pasta\API\obj\Debug\net5.0\API.genruntimeconfig.cache
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\appsettings.json
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\API.exe
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\API.deps.json
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\API.runtimeconfig.json
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\API.runtimeconfig.dev.json
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\API.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\ref\API.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\API.pdb
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.csprojAssemblyReference.cache
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.AssemblyInfoInputs.cache
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.AssemblyInfo.cs
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.csproj.CoreCompileInputs.cache
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\staticwebassets\API.StaticWebAssets.Manifest.cache
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\staticwebassets\API.StaticWebAssets.xml
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\scopedcss\bundle\API.styles.css
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.RazorTargetAssemblyInfo.cache
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.csproj.CopyComplete
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.dll
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\ref\API.dll
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.pdb
+C:\Users\tulio\Desktop\FreelaTec\API\obj\Debug\net5.0\API.genruntimeconfig.cache
+C:\Users\tulio\Desktop\FreelaTec\API\bin\Debug\net5.0\Newtonsoft.Json.dll
