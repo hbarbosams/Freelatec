@@ -1,0 +1,9 @@
+.espaco{
+  padding: 15px;
+  width: 40%;
+}
+.centralizar{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

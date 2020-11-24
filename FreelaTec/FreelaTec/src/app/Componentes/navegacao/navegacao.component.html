@@ -1,0 +1,28 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav cordabarra" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="textobranco"><mat-icon>list</mat-icon>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="" class="textobranco"><mat-icon class="espaco">login</mat-icon> Login</a>
+      <a mat-list-item routerLink="Home" class="textobranco"><mat-icon class="espaco">home</mat-icon>Home</a>
+      <a mat-list-item routerLink="Campanhas" class="textobranco"><mat-icon class="espaco">addchart</mat-icon>Contrato</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="mat-elevation-z6">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
+      </button>
+      <span>FreelaTec</span>
+    </mat-toolbar>
+   <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<mat-card></mat-card>

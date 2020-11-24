@@ -1,0 +1,50 @@
+<mat-card style="margin: 20px" class="mat-elevation-z6">
+  <mat-card-title>
+    Cadastro para Contratante
+  </mat-card-title>
+  <form [formGroup]="contratante" class="centralizar" (ngSubmit)="cadastrar()">
+    <mat-form-field appearance="fill" class="espaco">
+      <mat-label>Nome</mat-label>
+        <input matInput type="text" formControlName="Nome" >
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="espaco">
+      <mat-label>CNPJ</mat-label>
+      <input matInput type="text" formControlName="Cnpj"  mask="000.000.000-00||00.000.000/0000-00" >
+    </mat-form-field>
+    <br>
+      <mat-form-field appearance="fill" class="espaco">
+        <mat-label>Login</mat-label>
+        <input matInput type="text" formControlName="Login">
+      </mat-form-field>
+
+    <mat-form-field appearance="fill" class="espaco">
+      <mat-label>Senha</mat-label>
+      <input matInput type="password" formControlName="Senha">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="espaco">
+      <mat-label>E-mail</mat-label>
+      <input matInput type="email" formControlName="Email">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="espaco">
+      <mat-label>Telefone</mat-label>
+      <input matInput type="tel" formControlName="Telefone">
+    </mat-form-field>
+<br>
+    <mat-form-field appearance="fill" class="espaco" >
+      <mat-label>Área de Atuação</mat-label>
+      <input matInput type="text" formControlName="Area">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="espaco" style="width: 80%">
+      <mat-label>Descrição da Empresa</mat-label>
+      <textarea matInput formControlName="Desc"></textarea>
+    </mat-form-field>
+<br>
+    <button mat-raised-button color="primary" style="background-color: green; color: white;" class="espaco" >Cadastre-se</button>
+
+  </form>
+
+</mat-card>

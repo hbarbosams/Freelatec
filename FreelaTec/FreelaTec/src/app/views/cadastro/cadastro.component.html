@@ -1,0 +1,32 @@
+<mat-card class="mat-elevation-z6 centro" style="height: 300px; width: 300px">
+
+  <img  class="logo" src="assets/Freela%20tec.png" style="height: 50px;padding: 20px" alt="logo">
+  <mat-card-title> Cadastre-se</mat-card-title>
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+      <mat-list>
+        <mat-list-item>
+      <mat-card-content style="text-align: justify-all">
+      Cadastre-se como Contratante para cadastrar projetos!</mat-card-content>
+        </mat-list-item>
+        <mat-list-item>
+      <button mat-raised-button color="primary" style="background-color: green; color: white" (click)="empresa()" class="botao">Contratante</button>
+        </mat-list-item>
+      </mat-list>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-list>
+        <mat-list-item>
+      <mat-card-content style="text-align: justify-all">
+      Cadastre-se como freelancer para executar projetos!
+      </mat-card-content>
+        </mat-list-item>
+        <mat-list-item>
+      <button mat-raised-button color="primary" (click)="freelancer()" class="botao">Freelancer</button>
+        </mat-list-item>
+      </mat-list>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <button mat-stroked-button color="warn" (click)="login()" class="botao">Voltar</button>
+</mat-card>
+
