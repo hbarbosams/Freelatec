@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj": {}
+    "C:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj": {
+    "C:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj",
+        "projectPath": "C:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\API.csproj",
         "packagesPath": "C:\\Users\\tulio\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\obj\\",
+        "outputPath": "C:\\Users\\tulio\\Documents\\GitHub\\Freelatec\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tulio\\AppData\\Roaming\\NuGet\\NuGet.Config",
