@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin"
   ],
-  "SelectedNode": "\\Startup.cs",
+  "SelectedNode": "\\API.csproj",
   "PreviewInSolutionExplorer": false
 }

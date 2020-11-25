@@ -12,7 +12,6 @@
       <mat-label>CNPJ</mat-label>
       <input matInput type="text" formControlName="Cnpj"  mask="000.000.000-00||00.000.000/0000-00" >
     </mat-form-field>
-    <br>
       <mat-form-field appearance="fill" class="espaco">
         <mat-label>Login</mat-label>
         <input matInput type="text" formControlName="Login">
@@ -22,7 +21,6 @@
       <mat-label>Senha</mat-label>
       <input matInput type="password" formControlName="Senha">
     </mat-form-field>
-    <br>
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>E-mail</mat-label>
       <input matInput type="email" formControlName="Email">
@@ -32,19 +30,18 @@
       <mat-label>Telefone</mat-label>
       <input matInput type="tel" formControlName="Telefone">
     </mat-form-field>
-<br>
     <mat-form-field appearance="fill" class="espaco" >
       <mat-label>Área de Atuação</mat-label>
-      <input matInput type="text" formControlName="Area">
+      <input matInput type="text" formControlName="AreaAtuacao">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco" style="width: 80%">
       <mat-label>Descrição da Empresa</mat-label>
-      <textarea matInput formControlName="Desc"></textarea>
+      <textarea matInput formControlName="DescrContratante"></textarea>
     </mat-form-field>
-<br>
-    <button mat-raised-button color="primary" style="background-color: green; color: white;" class="espaco" >Cadastre-se</button>
-
+    <button mat-raised-button color="primary" style="margin-bottom: 30px;"
+            class="espaco">Cadastre-se</button>
   </form>
+  <button mat-stroked-button color="warn" (click)="login()" class="espaco" >Cancelar</button>
 
 </mat-card>

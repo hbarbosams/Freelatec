@@ -1,6 +1,7 @@
-export class Freelancer{
-  // tslint:disable-next-line:variable-name
-  freelancer_id?: number;
+import {Pessoa} from './Pessoa';
+
+export class Freelancer extends Pessoa{
+  freelancerId?: number;
   ra?: string;
   experiencia?: string;
   cpf?: string;

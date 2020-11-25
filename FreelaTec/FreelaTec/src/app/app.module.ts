@@ -29,7 +29,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HttpParams} from '@angular/common/http';
 import {IConfig, NgxMaskModule} from 'ngx-mask';
 import {registerLocaleData} from '@angular/common';
 import localePt from '@angular/common/locales/pt';

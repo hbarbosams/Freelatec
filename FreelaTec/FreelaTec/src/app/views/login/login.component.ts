@@ -5,7 +5,6 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../../environments/environment';
 import {LoginService} from './login.service';
-import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login',

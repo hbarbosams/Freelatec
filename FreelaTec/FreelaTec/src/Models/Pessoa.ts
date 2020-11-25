@@ -1,10 +1,11 @@
 export class Pessoa{
-  id?: number;
-  login?: string;
-  senha?: string;
-  email?: string;
-  telefone?: string;
-  qtdProjetos?: number;
-  mediaNota?: number;
-  status?: number;
+  Id?: number;
+  Nome?: string;
+  Login?: string;
+  Senha?: string;
+  Email?: string;
+  Telefone?: string;
+  QtdProjetos?: number;
+  MediaNota?: number;
+  Status?: number;
 }

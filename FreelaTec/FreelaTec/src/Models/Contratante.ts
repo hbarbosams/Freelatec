@@ -1,7 +1,9 @@
-export class ContratanteModel{
-  // tslint:disable-next-line:variable-name
-  contratante_id?: number;
-  descContratante?: string;
-  areaAtuacao?: string;
-  cnpj?: string;
+import {Pessoa} from './Pessoa';
+
+
+export class ContratanteModel extends Pessoa{
+  ContratanteId?: number;
+  DescrContratante?: string;
+  AreaAtuacao?: string;
+  Cnpj?: string;
 }
