@@ -1,0 +1,8 @@
+.espaco{
+  padding: 15px;
+  width: 40%;
+}
+.centralizar{
+  display: block;
+  justify-content: center;
+}
