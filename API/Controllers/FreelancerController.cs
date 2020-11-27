@@ -24,5 +24,44 @@ namespace API.Controllers
               data.Create(freelancer);
             return Ok (freelancer);
         }
+
+        [Route("api/[controller]/CPF")]
+        [HttpGet]
+         public IActionResult CPF(string cpf){
+             Freelancer freelancer = new Freelancer();
+            using (var data = new FreelancerData())
+             freelancer = data.CPF(cpf);
+            return Ok(freelancer);
+         }
+
+         
+        [Route("api/[controller]/Login")]
+        [HttpGet]
+         public IActionResult Login(string Login){
+             Freelancer freelancer = new Freelancer();
+            using (var data = new FreelancerData())
+             freelancer = data.Login(Login);
+            return Ok(freelancer);
+         }
+
+        [Route("api/[controller]/Email")]
+        [HttpGet]
+         public IActionResult Email(string Email){
+             Freelancer freelancer = new Freelancer();
+            using (var data = new FreelancerData())
+             freelancer = data.Email(Email);
+            return Ok(freelancer);
+         }
+
+        [Route("api/[controller]/Ra")]
+        [HttpGet]
+         public IActionResult Ra(string ra){
+             Freelancer freelancer = new Freelancer();
+            using (var data = new FreelancerData())
+             freelancer = data.Ra(ra);
+            return Ok(freelancer);
+         }
+
+
     }
 }

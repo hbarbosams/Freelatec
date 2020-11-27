@@ -1,20 +1,20 @@
 <mat-card style="margin: 20px" class="mat-elevation-z6">
   <mat-card-title>
-    Cadastro para Contratante
+    Cadastro para Freelancer
   </mat-card-title>
   <form [formGroup]="Freelancer" class="centralizar" (ngSubmit)="cadastrar()">
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Nome</mat-label>
-      <input matInput type="text" formControlName="Nome" >
+      <input matInput type="text"  formControlName="Nome" >
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>CPF</mat-label>
-      <input matInput type="text" formControlName="FPF"  mask="000.000.000-00" >
+      <input matInput type="text" formControlName="Cpf" (blur)="ConfereCPF()"  mask="000.000.000-00" >
     </mat-form-field>
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Login</mat-label>
-      <input matInput type="text" formControlName="Login">
+      <input matInput type="text"  (blur)="ConfereLogin()" formControlName="Login">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
@@ -23,23 +23,24 @@
     </mat-form-field>
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>E-mail</mat-label>
-      <input matInput type="email" formControlName="Email">
+      <input matInput type="email" (blur)="ConfereEmail()" formControlName="Email">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Telefone</mat-label>
       <input matInput type="tel" mask="(00) 0000-0000||(00) 0 0000-0000" formControlName="Telefone">
     </mat-form-field>
+
     <mat-form-field appearance="fill" class="espaco" >
       <mat-label>Ra</mat-label>
-      <input matInput type="text" formControlName="Ra">
+      <input matInput type="text" (blur)="ConfereRa()" formControlName="Ra">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco" style="width: 80%">
       <mat-label>Descreva suas Experiências</mat-label>
       <textarea matInput formControlName="Experiencia"></textarea>
     </mat-form-field>
-    <button mat-raised-button color="primary" style="margin-bottom: 30px;"
+    <button mat-raised-button color="primary"  [disabled]="Freelancer.invalid" style="margin-bottom: 30px;"
             class="espaco">Cadastre-se</button>
   </form>
   <button mat-stroked-button color="warn" (click)="login()" class="espaco" >Cancelar</button>

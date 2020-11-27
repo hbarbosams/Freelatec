@@ -40,6 +40,79 @@ namespace API.Data
             
         }
 
+        public Freelancer CPF(string cpf){
+            Freelancer freelancer = null;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connectionDB;
+            // Comando que sera escrito no banco de dados
+            cmd.CommandText = @"Select cpf From freelancer WHERE freelancer.cpf = @Cpf";
+            cmd.Parameters.AddWithValue("@Cpf", cpf);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+            freelancer = new Freelancer
+                {
+                    Cpf = (string)reader["Cpf"], 
+                };
+            }
+            return freelancer;
+        }
+
+   public Freelancer Login(string Login){
+            Freelancer freelancer = null;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connectionDB;
+            // Comando que sera escrito no banco de dados
+            cmd.CommandText = @"Select login From pessoa WHERE pessoa.login = @Login";
+            cmd.Parameters.AddWithValue("@Login", Login);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+            freelancer = new Freelancer
+                {
+                    Login = (string)reader["Login"], 
+                };
+            }
+            return freelancer;
+        }
+
+   public Freelancer Email(string Email){
+            Freelancer freelancer = null;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connectionDB;
+            // Comando que sera escrito no banco de dados
+            cmd.CommandText = @"Select email From pessoa WHERE pessoa.email = @Email";
+            cmd.Parameters.AddWithValue("@Email", Email);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+            freelancer = new Freelancer
+                {
+                    Email = (string)reader["Email"], 
+                };
+            }
+            return freelancer;
+        }
+
+
+           public Freelancer Ra(string Ra){
+            Freelancer freelancer = null;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connectionDB;
+            // Comando que sera escrito no banco de dados
+            cmd.CommandText = @"Select ra From freelancer WHERE freelancer.ra = @Ra";
+            cmd.Parameters.AddWithValue("@Ra", Ra);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+            freelancer = new Freelancer
+                {
+                    Ra = (string)reader["ra"], 
+                };
+            }
+            return freelancer;
+        }
+
 
  
         public Freelancer Read(string login)

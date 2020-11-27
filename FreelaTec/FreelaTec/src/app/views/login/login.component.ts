@@ -5,6 +5,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../../environments/environment';
 import {LoginService} from './login.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -16,9 +17,9 @@ export class LoginComponent implements OnInit {
   // @ts-ignore
   formulario: FormGroup;
   urllogin = environment.API + 'Login/Read';
-
   constructor( private formBuilder: FormBuilder , private router: Router,
-               private http: HttpClient, private loginService: LoginService) { }
+               private http: HttpClient, private loginService: LoginService,
+               private  snak: MatSnackBar) { }
 
   ngOnInit(): void {
 
@@ -30,24 +31,27 @@ export class LoginComponent implements OnInit {
 
 
   envia() {
-    this.consulta(this.formulario.value).subscribe((dados) => {
+    this.consulta().subscribe((dados) => {
       this.loginService.cadastro = dados;
-      if (dados.cnpj == null){
-        this.router.navigate(['HomeFreelancer']);
-      }else {
-        this.router.navigate(['HomeContratante']);
+      if ( dados == null ){
+        this.snak.open('O seu login falhou, tente novamente!', 'X', {
+          duration: 2000,
+          horizontalPosition: 'right',
+          verticalPosition: 'top',
+        });
+      } else {
+        if (dados.cnpj == null){
+          this.router.navigate(['HomeFreelancer']);
+        } else {
+          if (dados.cpf == null) {
+            this.router.navigate(['HomeContratante']);
+          }
+        }
       }
-
-    } );
+    });
   }
-
-
-  consulta(dados: string): Observable<any> {
-    console.log(this.formulario.get('Login')?.value);
-    const parametros = dados ?
-      {params: new HttpParams().set('login', this.formulario.get('Login')?.value)
-          .set('senha', this.formulario.get('Senha')?.value) } : {};
-    return this.http.get<any>(this.urllogin, parametros);
+  consulta(): Observable<any> {
+    return this.http.post<any>(this.urllogin, this.formulario.value);
   }
 
   cadastro(): void{

@@ -11,20 +11,22 @@ namespace API.Controllers
 {
     [ApiController] 
          public class LoginController : Controller{
-             [Route("api/[controller]/Read")]
-             [HttpGet]
-             public IActionResult Read(string login, string senha){
+
+        [Route("api/[controller]/Read")]
+             [HttpPost]
+             public IActionResult Read([FromBody] Pessoa pessoa){
                  var freelancer = new Freelancer();
                  var contratante = new Contratante();
+
             using (var data = new FreelancerData())
             
-                freelancer=data.Read(login);
-                if ( freelancer != null && freelancer.Senha == senha){
+                freelancer=data.Read(pessoa.Login);
+                if ( freelancer != null && freelancer.Senha == pessoa.Senha && freelancer.Login == pessoa.Login){
                     return Ok(freelancer);
                 }else{
                      using (var data1 = new ContratanteData())
-                    contratante = data1.Read(login);
-                    if ( contratante != null && contratante.Senha == senha){
+                    contratante = data1.Read(pessoa.Login);
+                    if ( contratante != null && contratante.Senha == pessoa.Senha && contratante.Login == pessoa.Login){
                         return Ok(contratante);
                     }else{
                         return Ok();

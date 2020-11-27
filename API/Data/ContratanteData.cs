@@ -112,6 +112,23 @@ namespace API.Data
             return contratante;
         }
 
+         public Contratante Cnpj(string cnpj){
+            Contratante contratante = null;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connectionDB;
+            // Comando que sera escrito no banco de dados
+            cmd.CommandText = @"Select cnpj From contratante WHERE contratante.cnpj = @Cnpj";
+            cmd.Parameters.AddWithValue("@Cnpj", cnpj);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+            contratante = new Contratante
+                {
+                    Cnpj = (string)reader["Cnpj"], 
+                };
+            }
+            return contratante;
+        }
         public void Update(Contratante contratante)
         {
             SqlCommand cmd = new SqlCommand();

@@ -14,4 +14,6 @@ export class HomeContratanteComponent implements OnInit {
 
   }
 
+
+
 }

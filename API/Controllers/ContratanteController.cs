@@ -41,5 +41,15 @@ namespace API.Controllers
                 data.Create(contratante);
             return Ok(contratante);
         }
+
+        [Route("api/[controller]/CNPJ")]
+        [HttpGet]
+         public IActionResult CNPJ(string cnpj){
+             Contratante contratante = new Contratante();
+            using (var data = new ContratanteData())
+             contratante = data.Cnpj(cnpj);
+            return Ok(contratante);
+         }
+
     }
 }
