@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,10 +8,16 @@ import {Router} from '@angular/router';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
+  public projeto: FormGroup;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.projeto = this.fb.group({
+      Nome: [null, [Validators.required, Validators.maxLength(200)]],
+    });
+
+
   }
 
   empresa(): void{

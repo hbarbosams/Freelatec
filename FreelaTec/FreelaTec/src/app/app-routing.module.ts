@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './views/login/login.component';
 import {CadastroComponent} from './views/cadastro/cadastro.component';
-import {CampanhasComponent} from './views/campanhas/campanhas.component';
 import {HomeContratanteComponent} from './views/home-contratante/home-contratante.component';
 import {HomeFreelancerComponent} from './views/home-freelancer/home-freelancer.component';
 import {ContratoComponent} from './views/contrato/contrato.component';
@@ -24,10 +23,6 @@ const routes: Routes = [
   {
     path: 'Cadastro',
     component: CadastroComponent
-  },
-  {
-    path: 'Campanhas',
-    component: CampanhasComponent
   },
   {
     path: 'Contrato',

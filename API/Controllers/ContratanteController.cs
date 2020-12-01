@@ -17,6 +17,7 @@ namespace API.Controllers
         [HttpGet]        
          public IActionResult Read(int id)
 
+
         {
             var resultado = new Contratante();
                 using (var data = new ContratanteData())

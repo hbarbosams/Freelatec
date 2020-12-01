@@ -29,18 +29,19 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {HttpClientModule, HttpParams} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import {IConfig, NgxMaskModule} from 'ngx-mask';
 import {registerLocaleData} from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {CadastroComponent} from './views/cadastro/cadastro.component';
-import {CampanhasComponent} from './views/campanhas/campanhas.component';
-import { HomeContratanteComponent } from './views/home-contratante/home-contratante.component';
-import { HomeFreelancerComponent } from './views/home-freelancer/home-freelancer.component';
-import { ContratoComponent } from './views/contrato/contrato.component';
-import { CadastroEmpresaComponent } from './views/cadastro-empresa/cadastro-empresa.component';
-import { CadastroFreelancerComponent } from './views/cadastro-freelancer/cadastro-freelancer.component';
+import {HomeContratanteComponent} from './views/home-contratante/home-contratante.component';
+import {HomeFreelancerComponent} from './views/home-freelancer/home-freelancer.component';
+import {ContratoComponent} from './views/contrato/contrato.component';
+import {CadastroEmpresaComponent} from './views/cadastro-empresa/cadastro-empresa.component';
+import {CadastroFreelancerComponent} from './views/cadastro-freelancer/cadastro-freelancer.component';
+import {TabelaContratosComponent} from './views/home-contratante/tabela-contratos/tabela-contratos.component';
+import { ProjetosComponent } from './views/contrato/projetos/projetos.component';
 
 registerLocaleData(localePt);
 const maskConfig: Partial<IConfig> = {
@@ -54,12 +55,13 @@ const maskConfig: Partial<IConfig> = {
     NavegacaoComponent,
     LoginComponent,
     CadastroComponent,
-    CampanhasComponent,
     HomeContratanteComponent,
     HomeFreelancerComponent,
     ContratoComponent,
     CadastroEmpresaComponent,
-    CadastroFreelancerComponent
+    CadastroFreelancerComponent,
+    TabelaContratosComponent,
+    ProjetosComponent
   ],
   imports: [
     BrowserModule,

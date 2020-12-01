@@ -21,13 +21,10 @@
   </mat-grid-list>
 
 </mat-card>
-
 <mat-card style="margin-top: 5%">
-
-  <mat-card-title>
-    <button mat-raised-button color="primary"><mat-icon>add_circle_outline</mat-icon>Novo Projeto</button>
+  <mat-card-title style="text-align: center;">
+    <button mat-raised-button color="primary" (click)="criacontrato()"><mat-icon>add_circle_outline</mat-icon>Novo Contrato</button>
   </mat-card-title>
-
-
-
 </mat-card>
+
+<app-tabela-contratos></app-tabela-contratos>

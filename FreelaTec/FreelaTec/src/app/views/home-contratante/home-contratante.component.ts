@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LoginService} from '../login/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-contratante',
@@ -8,10 +9,15 @@ import {LoginService} from '../login/login.service';
 })
 export class HomeContratanteComponent implements OnInit {
 
-  constructor(public loginService: LoginService) { }
+  constructor(public loginService: LoginService,
+              private route: Router) { }
 
   ngOnInit(): void {
 
+  }
+
+  criacontrato(): void{
+    this.route.navigate(['Contrato']);
   }
 
 
