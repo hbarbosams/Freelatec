@@ -2,9 +2,10 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { ProjetosDataSource,  } from './projetos-datasource';
+import { ProjetosDataSource } from './projetos-datasource';
 import {ProjetosItem} from '../../../../Models/Projeto';
 import {ContratoService} from '../contrato.service';
+
 
 @Component({
   selector: 'app-projetos',
@@ -18,22 +19,28 @@ export class ProjetosComponent implements AfterViewInit, OnInit {
   dataSource: ProjetosDataSource;
   contagem: number;
 
-  constructor(private contratoService: ContratoService) {
+  constructor(public contratoService: ContratoService) {
   }
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['idProjeto', 'descricao'];
+  displayedColumns = ['descricaoProjeto', 'descricaoServico',  'valor'];
 
   ngOnInit() {
+    // @ts-ignore
     this.dataSource = new ProjetosDataSource();
-    this.dataSource.data = this.contratoService.lista;
     this.contagem = this.dataSource.data.length;
 
   }
-
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
+  }
+
+  atualizar(): void{
+    // @ts-ignore
+    this.dataSource = new ProjetosDataSource();
+
+    this.ngAfterViewInit();
   }
 }

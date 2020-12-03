@@ -57,14 +57,14 @@ namespace API.Controllers
                 return View();
             }
             var novaPessoa = new Pessoa();
-            novaPessoa.Nome = pessoa["nome"];
-            novaPessoa.Login = pessoa["login"];
-            novaPessoa.Senha = pessoa["senha"];
-            novaPessoa.Status = 1;
-            novaPessoa.Telefone = pessoa["telefone"];
-            novaPessoa.QtdProjetos = 0;
-            novaPessoa.MediaNota = 0;
-            novaPessoa.Email= pessoa["email"];
+            novaPessoa.nome = pessoa["nome"];
+            novaPessoa.login = pessoa["login"];
+            novaPessoa.senha = pessoa["senha"];
+            novaPessoa.status = 1;
+            novaPessoa.telefone = pessoa["telefone"];
+            novaPessoa.qtdProjetos = 0;
+            novaPessoa.mediaNota = 0;
+            novaPessoa.email= pessoa["email"];
             
             using (var data = new PessoaData())
                 data.Create(novaPessoa);

@@ -1,47 +1,72 @@
 <mat-card>
   <mat-card-title>Novo Contrato</mat-card-title>
 
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+      <div class="block">
+      <mat-form-field appearance="fill" class="espaco">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput autofocus></textarea>
+      </mat-form-field>
 
-    <mat-form-field appearance="fill" class="espaco" style="width: 80%">
-      <mat-label>Descrição</mat-label>
-      <textarea matInput autofocus></textarea>
-    </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Escolha a data de Entrega</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Escolha a data de Entrega</mat-label>
-      <input matInput [matDatepicker]="picker">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  <form>
 
-    <h4>Selecione o Projeto</h4>
-    <mat-form-field appearance="fill" class="linha" >
-      <mat-label>Projetos</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let projeto of ListaProjetos" [value]="projeto.idProjeto">
-          {{projeto.descricao}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+      <form  [formGroup]="item" (ngSubmit)="adiciona()">
 
-    <mat-form-field appearance="fill" class="linha">
-      <mat-label>Valor</mat-label>
-      <input matInput mask="separator.2"
-             [thousandSeparator]="'.'"
-             [decimalMarker]="','"
-             prefix="R$ "
-             type="text"
-             [dropSpecialCharacters]="true" >
-    </mat-form-field>
+        <mat-card-title>Selecione seu Projeto</mat-card-title>
+        <mat-form-field appearance="fill" style="width: 100%">
+          <mat-label>Projetos</mat-label>
+          <mat-select formControlName="projeto">
+            <mat-option *ngFor="let projeto of ListaProjetos" [value]="projeto">
+              {{projeto.descricao}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%">
+          <mat-label>Valor</mat-label>
+          <input matInput formControlName="valor" mask="separator.2"
+                 [thousandSeparator]="'.'"
+                 [decimalMarker]="','"
+                 prefix="R$ "
+                 type="text"
+                 [dropSpecialCharacters]="true">
+        </mat-form-field>
 
-    <mat-form-field appearance="fill" class="linha" style="width: 80%">
-      <mat-label>Descrição do Projeto</mat-label>
-      <textarea matInput ></textarea>
-    </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%">
+          <mat-label>Descrição do Projeto</mat-label>
+          <textarea matInput formControlName="descricao" spellcheck="true" ></textarea>
+        </mat-form-field>
 
-    <button mat-raised-button color="primary" style="margin-bottom: 30px;"
-            class="espaco" (click)="adicionaProjeto()"><mat-icon>add</mat-icon> Adicionar</button>
+        <button type="submit" mat-raised-button color="primary" style="margin-bottom: 30px; width: 100%"
+                class="espaco"><mat-icon>add</mat-icon>Adicionar</button>
 
-  </form>
+      </form>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div style="background-color: #3F51B5; border-radius: 10px; width: 100%">
+      <img src="assets/Degital_marketing_SVG.svg" width="80%">
+
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
 </mat-card>
+
+
+
+<app-projetos></app-projetos>
+
+<br>
+
+
+
+<button type="submit" mat-raised-button color="primary"
+        style="margin-bottom: 80px; background-color: green; width: 100%" (click)="criaContrato()"
+        ><mat-icon>post_add</mat-icon>Criar Contrato</button>

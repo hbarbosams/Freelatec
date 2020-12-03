@@ -1,21 +1,26 @@
 <mat-card style="text-align: center" class="mat-elevation-z6">
-  <mat-card-title>Seja bem vindo, {{this.loginService.cadastro.nome|titlecase}} </mat-card-title>
+  <mat-card-title>Seja bem vindo, {{this.loginService.contratante.nome|titlecase}} </mat-card-title>
 
 
-  <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-list cols="3" rowHeight="1:1">
     <mat-grid-tile>
       <mat-list role="list">
-        <mat-list-item ><mat-icon class="espaco">account_circle</mat-icon>Nome: {{this.loginService.cadastro.nome|titlecase}}</mat-list-item>
-        <mat-list-item> <mat-icon class="espaco">assignment</mat-icon>CNPJ: {{this.loginService.cadastro.cnpj|mask: '000.000.000-00||00.000.000/0000-00'}} </mat-list-item>
-        <mat-list-item> <mat-icon class="espaco">mail</mat-icon>Email: {{this.loginService.cadastro.email}}</mat-list-item>
-        <mat-list-item> <mat-icon class="espaco">phone</mat-icon>Telefone: {{this.loginService.cadastro.telefone| mask:'(00) 00000-0000||(00) 0000-0000'}}</mat-list-item>
+        <mat-list-item ><mat-icon class="espaco">account_circle</mat-icon>Nome: {{this.loginService.contratante.nome|titlecase}}</mat-list-item>
+        <mat-list-item> <mat-icon class="espaco">assignment</mat-icon>CNPJ: {{this.loginService.contratante.cnpj|mask: '000.000.000-00||00.000.000/0000-00'}} </mat-list-item>
+        <mat-list-item> <mat-icon class="espaco">mail</mat-icon>Email: {{this.loginService.contratante.email}}</mat-list-item>
+        <mat-list-item> <mat-icon class="espaco">phone</mat-icon>Telefone: {{this.loginService.contratante.telefone| mask:'(00) 00000-0000||(00) 0000-0000'}}</mat-list-item>
       </mat-list>
     </mat-grid-tile>
     <mat-grid-tile>
       <mat-list role="list">
-      <mat-list-item> <mat-icon class="espaco">batch_prediction</mat-icon>Projetos: {{this.loginService.cadastro.qtdProjetos|number}}</mat-list-item>
-      <mat-list-item> <mat-icon class="espaco">star</mat-icon>Nota: {{this.loginService.cadastro.mediaNota|number}} </mat-list-item>
-      <mat-list-item> <mat-icon class="espaco">work</mat-icon>Area: {{this.loginService.cadastro.areaAtuacao}}</mat-list-item>
+        <img src="assets/Social_media_adv_SVG.svg"  width="200px">
+      </mat-list>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-list role="list">
+      <mat-list-item> <mat-icon class="espaco">batch_prediction</mat-icon>Projetos: {{this.loginService.contratante.qtdProjetos|number}}</mat-list-item>
+      <mat-list-item> <mat-icon class="espaco">star</mat-icon>Nota: {{this.loginService.contratante.mediaNota|number}} </mat-list-item>
+      <mat-list-item> <mat-icon class="espaco">work</mat-icon>Area: {{this.loginService.contratante.areaAtuacao}}</mat-list-item>
       </mat-list>
     </mat-grid-tile>
   </mat-grid-list>
@@ -23,8 +28,14 @@
 </mat-card>
 <mat-card style="margin-top: 5%">
   <mat-card-title style="text-align: center;">
+    <img src="assets/Business_SVG.svg" width="200px">
+    <br>
+    <br>
     <button mat-raised-button color="primary" (click)="criacontrato()"><mat-icon>add_circle_outline</mat-icon>Novo Contrato</button>
   </mat-card-title>
 </mat-card>
 
+<mat-card style="margin-top: 20px" class="mat-elevation-z6">
+  <mat-card-title>Seus Contratos</mat-card-title>
 <app-tabela-contratos></app-tabela-contratos>
+</mat-card>

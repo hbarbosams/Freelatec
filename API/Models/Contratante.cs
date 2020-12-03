@@ -7,15 +7,15 @@ namespace API.Models
 {
     public class Contratante : Pessoa
     {
-        public string Cnpj{ get; set; }
-        public string AreaAtuacao{ get; set; }
-        public string DescrContratante{ get; set; }
+        public string cnpj{ get; set; }
+        public string areaAtuacao{ get; set; }
+        public string descrContratante{ get; set; }
 
         public Contratante() : base()
         {
-            Cnpj = null;
-            AreaAtuacao = null;
-            DescrContratante = null;
+            cnpj = null;
+            areaAtuacao = null;
+            descrContratante = null;
 
         }
     }

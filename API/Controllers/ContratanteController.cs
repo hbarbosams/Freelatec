@@ -29,14 +29,14 @@ namespace API.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] Contratante contratante)
         {
-            string nome = contratante.Nome;   //<input name = "nome"
-            string login = contratante.Login; //<input login = "login"
-            string senha = contratante.Senha; //<input senha = "senha"
-            string telefone = contratante.Telefone; //<input telefone = "telefone"
-            string email = contratante.Email; //<input email = "email"
-            string cnpj = contratante.Cnpj;
-            string areaAtuacao = contratante.AreaAtuacao;
-            string descrContratante = contratante.DescrContratante;
+            string nome = contratante.nome;   //<input name = "nome"
+            string login = contratante.login; //<input login = "login"
+            string senha = contratante.senha; //<input senha = "senha"
+            string telefone = contratante.telefone; //<input telefone = "telefone"
+            string email = contratante.email; //<input email = "email"
+            string cnpj = contratante.cnpj;
+            string areaAtuacao = contratante.areaAtuacao;
+            string descrContratante = contratante.descrContratante;
 
             using (var data = new ContratanteData())
                 data.Create(contratante);

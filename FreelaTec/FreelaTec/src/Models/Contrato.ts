@@ -1,4 +1,4 @@
-export class Contrato{
+export class Contrato {
   nrContrato: number;
   dataContrato: number;
   dataInicial: number;
@@ -9,7 +9,7 @@ export class Contrato{
   notaContratante: number;
   notaFreelancer: number;
   // tslint:disable-next-line:variable-name
-  contratante_id: number;
+  contratante_id: number | undefined;
   // tslint:disable-next-line:variable-name
   freelancer_id: number;
 }

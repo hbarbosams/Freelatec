@@ -34,10 +34,10 @@ namespace API.Controllers
                 return View();
             }
             var novoContrato = new Contrato();
-            novoContrato.Descricao = contrato["descricao"];
-            novoContrato.Status = 1;
-            novoContrato.NotaContratante = 0;
-            novoContrato.NotaFreelancer = 0;
+            novoContrato.descricao = contrato["descricao"];
+            novoContrato.status = 1;
+            novoContrato.notaContratante = 0;
+            novoContrato.notaFreelancer = 0;
             novoContrato.Id = id;
             
 

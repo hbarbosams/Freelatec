@@ -24,15 +24,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
     this.formulario = this.formBuilder.group({
-      Login: [null, Validators.required],
-      Senha: [null, Validators.required]
+      login: [null, Validators.required],
+      senha: [null, Validators.required]
     });
   }
 
 
   envia() {
     this.consulta().subscribe((dados) => {
-      this.loginService.cadastro = dados;
       if ( dados == null ){
         this.snak.open('O seu login falhou, tente novamente!', 'X', {
           duration: 2000,
@@ -41,9 +40,11 @@ export class LoginComponent implements OnInit {
         });
       } else {
         if (dados.cnpj == null){
+          this.loginService.freelancer = dados;
           this.router.navigate(['HomeFreelancer']);
         } else {
           if (dados.cpf == null) {
+            this.loginService.contratante = dados;
             this.router.navigate(['HomeContratante']);
           }
         }

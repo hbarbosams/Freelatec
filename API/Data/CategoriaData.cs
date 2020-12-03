@@ -21,7 +21,7 @@ namespace API.Data
             cmd.CommandText = @"INSERT INTO Categoria VALUES (@descricao)";
 
             // Colocando os dados recebidos pelo objeto cliente na string sql
-            cmd.Parameters.AddWithValue("@descricao", categoria.Descricao);
+            cmd.Parameters.AddWithValue("@descricao", categoria.descricao);
 
             // Execução da string qld no banco
             cmd.ExecuteNonQuery();
@@ -50,8 +50,8 @@ namespace API.Data
                     // Criando objeto pessoa que existe no banco
                     Categoria categoria = new Categoria();
 
-                    categoria.Codigo = (int)reader["Codigo"];
-                    categoria.Descricao = (string)reader["Descricao"];
+                    categoria.codigo = (int)reader["codigo"];
+                    categoria.descricao = (string)reader["descricao"];
 
                     lista.Add(categoria);
                 }
@@ -73,8 +73,8 @@ namespace API.Data
                                     SET Codigo = @codigo, Descricao = @descricao
                                     WHERE Id = @id";
 
-            cmd.Parameters.AddWithValue("@codigo", categoria.Codigo);
-            cmd.Parameters.AddWithValue("@descricao", categoria.Descricao);
+            cmd.Parameters.AddWithValue("@codigo", categoria.codigo);
+            cmd.Parameters.AddWithValue("@descricao", categoria.descricao);
 
             //Codigo = 0;
             //Descricao = null;

@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {CadastroEmpresaService} from './cadastro-empresa.service';
-import {ContratanteModel} from '../../../Models/Contratante';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {CadastroFreelancerService} from '../cadastro-freelancer/cadastro-freelancer.service';
 
@@ -43,45 +42,45 @@ export class CadastroEmpresaComponent implements OnInit {
   }
 
   ConfereCNPJ(): void {
-    if (this.contratante.get('Cnpj')?.value !== null) {
-      this.cadastroEmpresaService.CNPJ(this.contratante.get('Cnpj')?.value).subscribe((retorno) => {
+    if (this.contratante.get('cnpj')?.value !== null) {
+      this.cadastroEmpresaService.CNPJ(this.contratante.get('cnpj')?.value).subscribe((retorno) => {
         if (retorno !== null) {
           this.snak.open('CNPJ já cadastrado!', 'X', {
             duration: 2000,
             horizontalPosition: 'right',
             verticalPosition: 'top',
           });
-          this.contratante.get('Cnpj')?.setValue(null);
+          this.contratante.get('cnpj')?.setValue(null);
         }
       });
     }
   }
 
   ConfereLogin(): void {
-    if (this.contratante.get('Login')?.value !== null) {
-      this.cadastroFreelancerService.Login(this.contratante.get('Login')?.value).subscribe((retorno) => {
+    if (this.contratante.get('login')?.value !== null) {
+      this.cadastroFreelancerService.Login(this.contratante.get('login')?.value).subscribe((retorno) => {
         if (retorno !== null) {
           this.snak.open('Login já cadastrado!', 'X', {
             duration: 2000,
             horizontalPosition: 'right',
             verticalPosition: 'top',
           });
-          this.contratante.get('Login')?.setValue(null);
+          this.contratante.get('login')?.setValue(null);
         }
       });
     }
   }
 
   ConfereEmail(): void {
-    if (this.contratante.get('Email')?.value !== null) {
-      this.cadastroFreelancerService.Email(this.contratante.get('Email')?.value).subscribe((retorno) => {
+    if (this.contratante.get('email')?.value !== null) {
+      this.cadastroFreelancerService.Email(this.contratante.get('email')?.value).subscribe((retorno) => {
         if (retorno !== null) {
           this.snak.open('Email já cadastrado!', 'X', {
             duration: 2000,
             horizontalPosition: 'right',
             verticalPosition: 'top',
           });
-          this.contratante.get('Email')?.setValue(null);
+          this.contratante.get('email')?.setValue(null);
         }
       });
     }

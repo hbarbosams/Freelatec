@@ -21,14 +21,14 @@ namespace API.Data
             cmd.CommandText = @"INSERT INTO Pessoa (nome, login, senha, status, telefone, qtdprojetos, medianota, email)
                                 VALUES (@nome, @login, @senha, @status, @telefone, @qtdprojetos, @medianota, @email)";
             // Colocando os dados recebidos pelo objeto cliente na string sql
-            cmd.Parameters.AddWithValue("@nome", pessoa.Nome);
-            cmd.Parameters.AddWithValue("@login", pessoa.Login);
-            cmd.Parameters.AddWithValue("@senha", pessoa.Senha);
-            cmd.Parameters.AddWithValue("@status", pessoa.Status);
-            cmd.Parameters.AddWithValue("@telefone", pessoa.Telefone);
-            cmd.Parameters.AddWithValue("@qtdprojetos", pessoa.QtdProjetos);
-            cmd.Parameters.AddWithValue("@medianota", pessoa.MediaNota);
-            cmd.Parameters.AddWithValue("@email", pessoa.Email) ;
+            cmd.Parameters.AddWithValue("@nome", pessoa.nome);
+            cmd.Parameters.AddWithValue("@login", pessoa.login);
+            cmd.Parameters.AddWithValue("@senha", pessoa.senha);
+            cmd.Parameters.AddWithValue("@status", pessoa.status);
+            cmd.Parameters.AddWithValue("@telefone", pessoa.telefone);
+            cmd.Parameters.AddWithValue("@qtdprojetos", pessoa.qtdProjetos);
+            cmd.Parameters.AddWithValue("@medianota", pessoa.mediaNota);
+            cmd.Parameters.AddWithValue("@email", pessoa.email) ;
 
             // Execução da string qld no banco
             cmd.ExecuteNonQuery();
@@ -55,15 +55,15 @@ namespace API.Data
                 {
                     // Criando objeto pessoa que existe no banco
                     Pessoa pessoa = new Pessoa();
-                    pessoa.Id = (int)reader["IdCliente"];
-                    pessoa.Nome = (string)reader["Nome"];
-                    pessoa.Login = (string)reader["Login"];
-                    pessoa.Senha = (string)reader["Senha"];
-                    pessoa.Status = (int)reader["Status"];
-                    pessoa.Telefone = (string)reader["Telefone"];
-                    pessoa.QtdProjetos = (int)reader["QtdProjetos"];
-                    pessoa.MediaNota = (decimal)reader["MediaNota"];
-                    pessoa.Email = (string)reader["Email"];
+                    pessoa.id = (int)reader["IdCliente"];
+                    pessoa.nome = (string)reader["Nome"];
+                    pessoa.login = (string)reader["Login"];
+                    pessoa.senha = (string)reader["Senha"];
+                    pessoa.status = (int)reader["Status"];
+                    pessoa.telefone = (string)reader["Telefone"];
+                    pessoa.qtdProjetos = (int)reader["QtdProjetos"];
+                    pessoa.mediaNota = (decimal)reader["MediaNota"];
+                    pessoa.email = (string)reader["Email"];
 
                     lista.Add(pessoa);
                 }
@@ -94,15 +94,15 @@ namespace API.Data
                 // Instancia o objeto cliente outra forma de ler
                 pessoa = new Pessoa
                 {
-                    Id = (int)reader["Id"],
-                    Nome = (string)reader["Nome"],
-                    Login = (string)reader["Login"],
-                    Senha = (string)reader["Senha"],
-                    Status = (int)reader["Status"],
-                    Telefone = (string)reader["Telefone"],
-                    QtdProjetos = (int)reader["QtdProjetos"],
-                    MediaNota = (decimal)reader["MediaNota"],
-                    Email = (string)reader["Email"]
+                    id = (int)reader["Id"],
+                    nome = (string)reader["Nome"],
+                    login = (string)reader["Login"],
+                    senha = (string)reader["Senha"],
+                    status = (int)reader["Status"],
+                    telefone = (string)reader["Telefone"],
+                    qtdProjetos = (int)reader["QtdProjetos"],
+                    mediaNota = (decimal)reader["MediaNota"],
+                    email = (string)reader["Email"]
                 };
             }
             return pessoa;
@@ -125,15 +125,15 @@ namespace API.Data
                 pessoa = new Pessoa
                 {
                     // Criando objeto pessoa que existe no banco
-                    Id = (int)reader["Id"],
-                    Nome = (string)reader["Nome"],
-                    Login = (string)reader["Login"],
-                    Senha = (string)reader["Senha"],
-                    Status = (int)reader["Status"],
-                    Telefone = (string)reader["Telefone"],
-                    QtdProjetos = (int)reader["QtdProjetos"],
-                    MediaNota = (decimal)reader["MediaNota"],
-                    Email = (string)reader["Email"],
+                    id = (int)reader["Id"],
+                    nome = (string)reader["Nome"],
+                    login = (string)reader["Login"],
+                    senha = (string)reader["Senha"],
+                    status = (int)reader["Status"],
+                    telefone = (string)reader["Telefone"],
+                    qtdProjetos = (int)reader["QtdProjetos"],
+                    mediaNota = (decimal)reader["MediaNota"],
+                    email = (string)reader["Email"],
                 };
             }
             return pessoa;
@@ -151,15 +151,15 @@ namespace API.Data
                                     QtdProjetos = @qtdprojetos, MediaNota = @medianota, Email = @email
                                     WHERE Id = @id";
 
-            cmd.Parameters.AddWithValue("@id", pessoa.Id);
-            cmd.Parameters.AddWithValue("@nome", pessoa.Nome);
-            cmd.Parameters.AddWithValue("@login", pessoa.Login);
-            cmd.Parameters.AddWithValue("@senha", pessoa.Senha);
-            cmd.Parameters.AddWithValue("@status", pessoa.Status);
-            cmd.Parameters.AddWithValue("@telefone", pessoa.Telefone);
-            cmd.Parameters.AddWithValue("@qtdprojetos", pessoa.QtdProjetos);
-            cmd.Parameters.AddWithValue("@medianota", pessoa.MediaNota);
-            cmd.Parameters.AddWithValue("@email", pessoa.Email);
+            cmd.Parameters.AddWithValue("@id", pessoa.id);
+            cmd.Parameters.AddWithValue("@nome", pessoa.nome);
+            cmd.Parameters.AddWithValue("@login", pessoa.login);
+            cmd.Parameters.AddWithValue("@senha", pessoa.senha);
+            cmd.Parameters.AddWithValue("@status", pessoa.status);
+            cmd.Parameters.AddWithValue("@telefone", pessoa.telefone);
+            cmd.Parameters.AddWithValue("@qtdprojetos", pessoa.qtdProjetos);
+            cmd.Parameters.AddWithValue("@medianota", pessoa.mediaNota);
+            cmd.Parameters.AddWithValue("@email", pessoa.email);
             
 
             cmd.ExecuteNonQuery();

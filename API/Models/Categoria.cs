@@ -7,14 +7,14 @@ namespace API.Models
 {
     public class Categoria
     {
-        public int? Codigo{ get; set; }
-        public string Descricao { get; set; }
+        public int? codigo{ get; set; }
+        public string descricao { get; set; }
 
         //Construtor 
         public Categoria()
         {
-            Codigo = 0;
-            Descricao = null;
+            codigo = 0;
+            descricao = null;
         }
     }
 }

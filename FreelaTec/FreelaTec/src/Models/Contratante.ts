@@ -2,8 +2,8 @@ import {Pessoa} from './Pessoa';
 
 
 export class ContratanteModel extends Pessoa{
-  ContratanteId?: number;
-  DescrContratante?: string;
-  AreaAtuacao?: string;
-  Cnpj?: string;
+  contratanteId?: number;
+  descrContratante?: string;
+  areaAtuacao?: string;
+  cnpj?: any;
 }

@@ -20,10 +20,10 @@ namespace API.Data
             cmd.CommandText = @"exec AddContrato @descricao, @status, @notaContratante, @notaFreelancer, @id";
 
             // Colocando os dados recebidos pelo objeto cliente na string sql
-            cmd.Parameters.AddWithValue("@descricao", contrato.Descricao);
-            cmd.Parameters.AddWithValue("@notacontratante", contrato.NotaContratante);
-            cmd.Parameters.AddWithValue("@notafreelancer", contrato.NotaFreelancer);
-            cmd.Parameters.AddWithValue("@status", contrato.Status);
+            cmd.Parameters.AddWithValue("@descricao", contrato.descricao);
+            cmd.Parameters.AddWithValue("@notacontratante", contrato.notaContratante);
+            cmd.Parameters.AddWithValue("@notafreelancer", contrato.notaFreelancer);
+            cmd.Parameters.AddWithValue("@status", contrato.status);
             cmd.Parameters.AddWithValue("@id", contrato.Id);
             // Execução da string qld no banco
             cmd.ExecuteNonQuery();
@@ -51,16 +51,16 @@ namespace API.Data
                 {
                     // Criando objeto pessoa que existe no banco
                     Contrato contrato = new Contrato();
-                    contrato.NrContrato = (int)reader["NrContrato"];
-                    contrato.DataContrato = (DateTime)reader["DataContrato"];
-                    contrato.Total = (double)reader["Total"];
-                    contrato.Descricao = (string)reader["Descricao"];
-                    contrato.DataInicial = (DateTime)reader["DataInicial"];
-                    contrato.NotaContratante = (int)reader["NotaContratante"];
-                    contrato.NotaFreelancer = (int)reader["NotaFreelancer"];
-                    contrato.Prazo = (DateTime)reader["Prazo"];
-                    contrato.Status = (int)reader["Status"];
-                    contrato.Taxa = (double)reader["Taxa"];
+                    contrato.nrContrato = (int)reader["NrContrato"];
+                    contrato.dataContrato = (DateTime)reader["DataContrato"];
+                    contrato.total = (double)reader["Total"];
+                    contrato.descricao = (string)reader["Descricao"];
+                    contrato.dataInicial = (DateTime)reader["DataInicial"];
+                    contrato.notaContratante = (int)reader["NotaContratante"];
+                    contrato.notaFreelancer = (int)reader["NotaFreelancer"];
+                    contrato.prazo = (DateTime)reader["Prazo"];
+                    contrato.status = (int)reader["Status"];
+                    contrato.taxa = (double)reader["Taxa"];
 
                     lista.Add(contrato);
                 }
@@ -84,16 +84,16 @@ namespace API.Data
                                     Prazo = @prazo, Status = @status, Taxa = @taxa
                                     WHERE Id = @id";
 
-            cmd.Parameters.AddWithValue("@nrcontrato", contrato.NrContrato);
-            cmd.Parameters.AddWithValue("@datacontrato", contrato.DataContrato);
-            cmd.Parameters.AddWithValue("@total", contrato.Total);
-            cmd.Parameters.AddWithValue("@descricao", contrato.Descricao);
-            cmd.Parameters.AddWithValue("@datainicial", contrato.DataInicial);
-            cmd.Parameters.AddWithValue("@notacontratante", contrato.NotaContratante);
-            cmd.Parameters.AddWithValue("@notafreelancer", contrato.NotaFreelancer);
-            cmd.Parameters.AddWithValue("@prazo", contrato.Prazo);
-            cmd.Parameters.AddWithValue("@status", contrato.Status);
-            cmd.Parameters.AddWithValue("@taxa", contrato.Taxa);
+            cmd.Parameters.AddWithValue("@nrcontrato", contrato.nrContrato);
+            cmd.Parameters.AddWithValue("@datacontrato", contrato.dataContrato);
+            cmd.Parameters.AddWithValue("@total", contrato.total);
+            cmd.Parameters.AddWithValue("@descricao", contrato.descricao);
+            cmd.Parameters.AddWithValue("@datainicial", contrato.dataInicial);
+            cmd.Parameters.AddWithValue("@notacontratante", contrato.notaContratante);
+            cmd.Parameters.AddWithValue("@notafreelancer", contrato.notaFreelancer);
+            cmd.Parameters.AddWithValue("@prazo", contrato.prazo);
+            cmd.Parameters.AddWithValue("@status", contrato.status);
+            cmd.Parameters.AddWithValue("@taxa", contrato.taxa);
 
             cmd.ExecuteNonQuery();
         }

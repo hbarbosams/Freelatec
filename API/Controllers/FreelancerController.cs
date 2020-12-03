@@ -61,7 +61,5 @@ namespace API.Controllers
              freelancer = data.Ra(ra);
             return Ok(freelancer);
          }
-
-
     }
 }

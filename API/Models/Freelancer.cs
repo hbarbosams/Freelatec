@@ -7,15 +7,15 @@ namespace API.Models
 {
     public class Freelancer : Pessoa
     {
-        public string Cpf{ get; set; }
-        public string Ra{ get; set; }
-        public string Experiencia{ get; set; }
+        public string cpf{ get; set; }
+        public string ra{ get; set; }
+        public string experiencia{ get; set; }
 
         public Freelancer() : base()
         {
-            Cpf = null;
-            Ra = null;
-            Experiencia = null;
+            cpf = null;
+            ra = null;
+            experiencia = null;
         }
     }
 }

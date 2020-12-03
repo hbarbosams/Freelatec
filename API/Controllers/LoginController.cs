@@ -20,13 +20,13 @@ namespace API.Controllers
 
             using (var data = new FreelancerData())
             
-                freelancer=data.Read(pessoa.Login);
-                if ( freelancer != null && freelancer.Senha == pessoa.Senha && freelancer.Login == pessoa.Login){
+                freelancer=data.Read(pessoa.login);
+                if ( freelancer != null && freelancer.senha == pessoa.senha && freelancer.login == pessoa.login){
                     return Ok(freelancer);
                 }else{
                      using (var data1 = new ContratanteData())
-                    contratante = data1.Read(pessoa.Login);
-                    if ( contratante != null && contratante.Senha == pessoa.Senha && contratante.Login == pessoa.Login){
+                    contratante = data1.Read(pessoa.login);
+                    if ( contratante != null && contratante.senha == pessoa.senha && contratante.login == pessoa.login){
                         return Ok(contratante);
                     }else{
                         return Ok();

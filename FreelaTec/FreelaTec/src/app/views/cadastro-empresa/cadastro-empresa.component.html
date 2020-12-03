@@ -5,30 +5,30 @@
   <form [formGroup]="contratante" class="centralizar" (ngSubmit)="cadastrar()">
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Nome</mat-label>
-        <input matInput type="text" formControlName="Nome" >
+        <input matInput type="text" formControlName="nome" >
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>CNPJ</mat-label>
-      <input matInput type="text" (blur)="ConfereCNPJ()" formControlName="Cnpj"  mask="00.000.000/0000-00" >
+      <input matInput type="text" (blur)="ConfereCNPJ()" formControlName="cnpj"  mask="00.000.000/0000-00" >
     </mat-form-field>
       <mat-form-field appearance="fill" class="espaco">
         <mat-label>Login</mat-label>
-        <input matInput type="text" (blur)="ConfereLogin()" formControlName="Login">
+        <input matInput type="text" (blur)="ConfereLogin()" formControlName="login">
       </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Senha</mat-label>
-      <input matInput type="password" formControlName="Senha">
+      <input matInput type="password" formControlName="senha">
     </mat-form-field>
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>E-mail</mat-label>
-      <input matInput type="email" (blur)="ConfereEmail()" formControlName="Email">
+      <input matInput type="email" (blur)="ConfereEmail()" formControlName="email">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Telefone</mat-label>
-      <input matInput type="tel" mask="(00) 0000-0000||(00) 0 0000-0000" formControlName="Telefone">
+      <input matInput type="tel" mask="(00) 0000-0000||(00) 0 0000-0000" formControlName="telefone">
     </mat-form-field>
     <mat-form-field appearance="fill" class="espaco" >
       <mat-label>Área de Atuação</mat-label>
@@ -37,7 +37,7 @@
 
     <mat-form-field appearance="fill" class="espaco" style="width: 80%">
       <mat-label>Descrição da Empresa</mat-label>
-      <textarea matInput formControlName="DescrContratante"></textarea>
+      <textarea matInput formControlName="descrContratante"></textarea>
     </mat-form-field>
     <button mat-raised-button color="primary" [disabled]="!contratante.valid" style="margin-bottom: 30px;"
             class="espaco">Cadastre-se</button>

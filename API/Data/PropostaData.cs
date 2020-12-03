@@ -20,9 +20,9 @@ namespace API.Data
             cmd.CommandText = @"INSERT INTO Proposta VALUES (@totalproposto, @descricao, @prazo)";
 
             // Colocando os dados recebidos pelo objeto cliente na string sql
-            cmd.Parameters.AddWithValue("@totalproposto", proposta.TotalProposto);
-            cmd.Parameters.AddWithValue("@descricao", proposta.Descricao);
-            cmd.Parameters.AddWithValue("@prazo", proposta.Prazo);
+            cmd.Parameters.AddWithValue("@totalproposto", proposta.totalProposto);
+            cmd.Parameters.AddWithValue("@descricao", proposta.descricao);
+            cmd.Parameters.AddWithValue("@prazo", proposta.prazo);
 
             // Execução da string qld no banco
             cmd.ExecuteNonQuery();
@@ -49,9 +49,9 @@ namespace API.Data
                     // Criando objeto pessoa que existe no banco
                     Proposta proposta = new Proposta();
 
-                    proposta.TotalProposto = (double)reader["TotalProposto"];
-                    proposta.Descricao = (string)reader["Descricao"];
-                    proposta.Prazo = (DateTime)reader["Prazo"];
+                    proposta.totalProposto = (double)reader["TotalProposto"];
+                    proposta.descricao = (string)reader["Descricao"];
+                    proposta.prazo = (DateTime)reader["Prazo"];
 
                     lista.Add(proposta);
 
@@ -75,9 +75,9 @@ namespace API.Data
                                     SET TotalProposto = @totalproposto, Descricao = @descricao, Prazo = @prazo
                                     WHERE Id = @id";
 
-            cmd.Parameters.AddWithValue("@totalproposto", proposta.TotalProposto);
-            cmd.Parameters.AddWithValue("@descricao", proposta.Descricao);
-            cmd.Parameters.AddWithValue("@prazo", proposta.Prazo);
+            cmd.Parameters.AddWithValue("@totalproposto", proposta.totalProposto);
+            cmd.Parameters.AddWithValue("@descricao", proposta.descricao);
+            cmd.Parameters.AddWithValue("@prazo", proposta.prazo);
 
             //TotalProposto = 0;
             //Descricao = null;

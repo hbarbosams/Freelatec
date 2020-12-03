@@ -1,3 +1,9 @@
 .linha{
 padding-right: 15px;
 }
+.block{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  overflow:auto;
+}

@@ -34,8 +34,8 @@ namespace API.Controllers
 
             var novoServico = new Servico();
 
-            novoServico.Descricao = servico["descricao"];
-            novoServico.Valor = Convert.ToDouble(servico["valor"]);
+            novoServico.descricao = servico["descricao"];
+            novoServico.valor = Convert.ToDouble(servico["valor"]);
 
             using (var data = new ServicoData())
                 data.Create(novoServico);

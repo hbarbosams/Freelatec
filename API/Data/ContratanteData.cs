@@ -21,18 +21,18 @@ namespace API.Data
             cmd.CommandText = @"exec AddContratante @nome, @login, @senha, @email, @telefone, @qtdProjetos,
                                                     @mediaNota, @status, @cnpj, @areaAtuacao, @descrContratante";
 
-            cmd.Parameters.AddWithValue("@nome", contratante.Nome);
-            cmd.Parameters.AddWithValue("@login", contratante.Login);
-            cmd.Parameters.AddWithValue("@senha", contratante.Senha);
-            cmd.Parameters.AddWithValue("@status", contratante.Status);
-            cmd.Parameters.AddWithValue("@telefone", contratante.Telefone);
-            cmd.Parameters.AddWithValue("@qtdprojetos", contratante.QtdProjetos);
-            cmd.Parameters.AddWithValue("@medianota", contratante.MediaNota);
-            cmd.Parameters.AddWithValue("@email", contratante.Email);
+            cmd.Parameters.AddWithValue("@nome", contratante.nome);
+            cmd.Parameters.AddWithValue("@login", contratante.login);
+            cmd.Parameters.AddWithValue("@senha", contratante.senha);
+            cmd.Parameters.AddWithValue("@status", contratante.status);
+            cmd.Parameters.AddWithValue("@telefone", contratante.telefone);
+            cmd.Parameters.AddWithValue("@qtdprojetos", contratante.qtdProjetos);
+            cmd.Parameters.AddWithValue("@medianota", contratante.mediaNota);
+            cmd.Parameters.AddWithValue("@email", contratante.email);
             // Colocando os dados recebidos pelo objeto cliente na string sql
-            cmd.Parameters.AddWithValue("@cnpj", contratante.Cnpj);
-            cmd.Parameters.AddWithValue("@areaatuacao", contratante.AreaAtuacao);
-            cmd.Parameters.AddWithValue("@descrcontratante", contratante.DescrContratante);
+            cmd.Parameters.AddWithValue("@cnpj", contratante.cnpj);
+            cmd.Parameters.AddWithValue("@areaatuacao", contratante.areaAtuacao);
+            cmd.Parameters.AddWithValue("@descrcontratante", contratante.descrContratante);
 
             // Execução da string qld no banco
             cmd.ExecuteNonQuery();
@@ -59,18 +59,18 @@ namespace API.Data
                 contratante = new Contratante
                 {
                     // Criando objeto pessoa que existe no banco
-                    Id = (int)reader["Id"],
-                    Nome = (string)reader["Nome"],
-                    Cnpj = (string)reader["Cnpj"],
-                    Login = (string)reader["Login"],
-                    Senha = (string)reader["Senha"],
-                    Status = (int)reader["Status"],
-                    Telefone = (string)reader["Telefone"],
-                    QtdProjetos = (int)reader["QtdProjetos"],
-                    MediaNota = (decimal)reader["MediaNota"],
-                    Email = (string)reader["Email"],
-                    AreaAtuacao = (string)reader["areaAtuacao"],
-                    DescrContratante = (string)reader["descrContratante"]
+                    id = (int)reader["Id"],
+                    nome = (string)reader["Nome"],
+                    cnpj = (string)reader["Cnpj"],
+                    login = (string)reader["Login"],
+                    senha = (string)reader["Senha"],
+                    status = (int)reader["Status"],
+                    telefone = (string)reader["Telefone"],
+                    qtdProjetos = (int)reader["QtdProjetos"],
+                    mediaNota = (decimal)reader["MediaNota"],
+                    email = (string)reader["Email"],
+                    areaAtuacao = (string)reader["areaAtuacao"],
+                    descrContratante = (string)reader["descrContratante"]
                 };
             }
             return contratante;
@@ -95,18 +95,18 @@ namespace API.Data
                 // Instancia o objeto cliente outra forma de ler
                 contratante = new Contratante
                 {
-                    Id = (int)reader["Id"],
-                    Nome = (string)reader["Nome"],
-                    Cnpj = (string)reader["Cnpj"],
-                    Login = (string)reader["Login"],
-                    Senha = (string)reader["Senha"],
-                    Status = (int)reader["Status"],
-                    Telefone = (string)reader["Telefone"],
-                    QtdProjetos = (int)reader["QtdProjetos"],
-                    MediaNota = (decimal)reader["MediaNota"],
-                    Email = (string)reader["Email"],
-                    AreaAtuacao = (string)reader["AreaAtuacao"],
-                    DescrContratante = (string)reader["DescrContratante"]
+                  id = (int)reader["Id"],
+                    nome = (string)reader["Nome"],
+                    cnpj = (string)reader["Cnpj"],
+                    login = (string)reader["Login"],
+                    senha = (string)reader["Senha"],
+                    status = (int)reader["Status"],
+                    telefone = (string)reader["Telefone"],
+                    qtdProjetos = (int)reader["QtdProjetos"],
+                    mediaNota = (decimal)reader["MediaNota"],
+                    email = (string)reader["Email"],
+                    areaAtuacao = (string)reader["areaAtuacao"],
+                    descrContratante = (string)reader["descrContratante"]
                 };
             }
             return contratante;
@@ -124,7 +124,7 @@ namespace API.Data
             {
             contratante = new Contratante
                 {
-                    Cnpj = (string)reader["Cnpj"], 
+                    cnpj = (string)reader["cnpj"], 
                 };
             }
             return contratante;
@@ -138,18 +138,18 @@ namespace API.Data
             cmd.CommandText = @"exec UpdateContratante @id, @nome, @login, @senha, @email, @telefone, @qtdProjetos, 
                                                        @mediaNota, @status, @areaAtuacao, @descrContratante";
 
-            cmd.Parameters.AddWithValue("@id", contratante.Id);
-            cmd.Parameters.AddWithValue("@nome", contratante.Nome);
-            cmd.Parameters.AddWithValue("@login", contratante.Login);
-            cmd.Parameters.AddWithValue("@senha", contratante.Senha);
-            cmd.Parameters.AddWithValue("@status", contratante.Status);
-            cmd.Parameters.AddWithValue("@telefone", contratante.Telefone);
-            cmd.Parameters.AddWithValue("@qtdprojetos", contratante.QtdProjetos);
-            cmd.Parameters.AddWithValue("@medianota", contratante.MediaNota);
-            cmd.Parameters.AddWithValue("@email", contratante.Email);
+            cmd.Parameters.AddWithValue("@id", contratante.id);
+            cmd.Parameters.AddWithValue("@nome", contratante.nome);
+            cmd.Parameters.AddWithValue("@login", contratante.login);
+            cmd.Parameters.AddWithValue("@senha", contratante.senha);
+            cmd.Parameters.AddWithValue("@status", contratante.status);
+            cmd.Parameters.AddWithValue("@telefone", contratante.telefone);
+            cmd.Parameters.AddWithValue("@qtdprojetos", contratante.qtdProjetos);
+            cmd.Parameters.AddWithValue("@medianota", contratante.mediaNota);
+            cmd.Parameters.AddWithValue("@email", contratante.email);
 
-            cmd.Parameters.AddWithValue("@areaatuacao", contratante.AreaAtuacao);
-            cmd.Parameters.AddWithValue("@descrcontratante", contratante.DescrContratante);
+            cmd.Parameters.AddWithValue("@areaatuacao", contratante.areaAtuacao);
+            cmd.Parameters.AddWithValue("@descrcontratante", contratante.descrContratante);
 
             //AreaAtuacao = null;
             //DescrContratante = null;

@@ -7,13 +7,13 @@ namespace API.Models
 {
     public class Servico
     {
-        public double Valor { get; set; }
-        public string Descricao{ get; set; }
+        public double valor { get; set; }
+        public string descricao{ get; set; }
 
         public Servico()
         {
-            Valor = 0;
-            Descricao = null;
+            valor = 0;
+            descricao = null;
         }
     }
 }

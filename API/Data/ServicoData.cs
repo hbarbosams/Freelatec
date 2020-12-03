@@ -20,8 +20,8 @@ namespace API.Data
             cmd.CommandText = @"INSERT INTO Servico (descricao, valor) VALUES (@descricao , @valor)";
 
             // Colocando os dados recebidos pelo objeto cliente na string sql
-            cmd.Parameters.AddWithValue("@descricao", servico.Descricao);
-            cmd.Parameters.AddWithValue("@valor", servico.Valor);
+            cmd.Parameters.AddWithValue("@descricao", servico.descricao);
+            cmd.Parameters.AddWithValue("@valor", servico.valor);
 
             // Execução da string qld no banco
             cmd.ExecuteNonQuery();
@@ -49,7 +49,7 @@ namespace API.Data
                     // Criando objeto pessoa que existe no banco
                     Servico servico = new Servico();
 
-                    servico.Valor = (double)reader["Valor"];
+                    servico.valor = (double)reader["Valor"];
                     
 
                     lista.Add(servico);
@@ -72,7 +72,7 @@ namespace API.Data
                                     SET Valor = @valor
                                     WHERE Id = @id";
 
-            cmd.Parameters.AddWithValue("@codigo", servico.Valor);
+            cmd.Parameters.AddWithValue("@codigo", servico.valor);
 
             cmd.ExecuteNonQuery();
         }

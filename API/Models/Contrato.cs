@@ -7,29 +7,29 @@ namespace API.Models
 {
     public class Contrato
     {
-        public int? NrContrato{ get; set; }
-        public DateTime DataContrato{ get; set; }
-        public double Total{ get; set; }
-        public string Descricao { get; set; }
-        public DateTime DataInicial { get; set; }
-        public double NotaContratante { get; set; }
-        public double NotaFreelancer{ get; set; }
-        public DateTime Prazo { get; set; }
-        public int Status { get; set; }
-        public double Taxa { get; set; }
+        public int? nrContrato{ get; set; }
+        public DateTime dataContrato{ get; set; }
+        public double total{ get; set; }
+        public string descricao { get; set; }
+        public DateTime dataInicial { get; set; }
+        public double notaContratante { get; set; }
+        public double notaFreelancer{ get; set; }
+        public DateTime prazo { get; set; }
+        public int status { get; set; }
+        public double taxa { get; set; }
 
         public Contrato()
         {
-            NrContrato = 0;
-            DataContrato = DateTime.Today;
-            Total = 0;
-            Descricao = null;
-            DataInicial = DateTime.Today;
-            NotaContratante = 0;
-            NotaFreelancer = 0;
-            Prazo = DateTime.Today;
-            Status = 0;  
-            Taxa = 0;
+            nrContrato = 0;
+            dataContrato = DateTime.Today;
+            total = 0;
+            descricao = null;
+            dataInicial = DateTime.Today;
+            notaContratante = 0;
+            notaFreelancer = 0;
+            prazo = DateTime.Today;
+            status = 0;  
+            taxa = 0;
         }
 
         public int Id { get; set; }

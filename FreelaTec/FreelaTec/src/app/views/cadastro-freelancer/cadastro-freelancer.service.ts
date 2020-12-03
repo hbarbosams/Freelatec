@@ -28,13 +28,13 @@ export class CadastroFreelancerService {
   }
 
   Login(login: string): Observable<any>{
-    const logs = new HttpParams().set('Login', login);
+    const logs = new HttpParams().set('login', login);
     // @ts-ignore
     return  this.http.get<any>(this.urlLogin, {params: logs});
   }
 
   Email(email: string): Observable<any>{
-    const ema = new HttpParams().set('Email', email);
+    const ema = new HttpParams().set('email', email);
     // @ts-ignore
     return  this.http.get<any>(this.urlEmail, {params: ema});
   }

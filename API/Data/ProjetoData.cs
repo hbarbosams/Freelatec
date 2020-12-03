@@ -20,8 +20,8 @@ namespace API.Data
             cmd.CommandText = @"INSERT INTO Projeto VALUES (@areaatuacao, @descrcontratante)";
 
             // Colocando os dados recebidos pelo objeto cliente na string sql
-            cmd.Parameters.AddWithValue("@idprojeto", projeto.IdProjeto);
-            cmd.Parameters.AddWithValue("@descricao", projeto.Descricao);
+            cmd.Parameters.AddWithValue("@idprojeto", projeto.idProjeto);
+            cmd.Parameters.AddWithValue("@descricao", projeto.descricao);
 
             // Execução da string qld no banco
             cmd.ExecuteNonQuery();
@@ -48,8 +48,8 @@ namespace API.Data
                     // Criando objeto pessoa que existe no banco
                     Projeto projeto= new Projeto();
 
-                    projeto.IdProjeto = (int)reader["IdProjeto"];
-                    projeto.Descricao= (string)reader["Descricao"];
+                    projeto.idProjeto = (int)reader["IdProjeto"];
+                    projeto.descricao= (string)reader["Descricao"];
 
                     lista.Add(projeto);
                 }
@@ -71,8 +71,8 @@ namespace API.Data
                                     SET IdProjeto = @idprojeto, Descricao = @descricao
                                     WHERE Id = @id";
 
-            cmd.Parameters.AddWithValue("@idprojeto", projeto.IdProjeto);
-            cmd.Parameters.AddWithValue("@descricao", projeto.Descricao);
+            cmd.Parameters.AddWithValue("@idprojeto", projeto.idProjeto);
+            cmd.Parameters.AddWithValue("@descricao", projeto.descricao);
 
             //IdProjeto = 0;
             //Descricao = null;

@@ -18,14 +18,14 @@ export class CadastroFreelancerComponent implements OnInit {
   Freelancer: FormGroup;
   ngOnInit(): void {
     this.Freelancer = this.fb.group({
-      Nome: [null, [Validators.required, Validators.maxLength(200)]],
-      Cpf:  [null, [Validators.required, Validators.maxLength(20)]],
-      Login: [null, [Validators.required, Validators.maxLength(30)]],
-      Senha: [null, [Validators.required, Validators.maxLength(20)]],
-      Email: [null, [Validators.required, Validators.maxLength(100), Validators.email]],
-      Telefone: [null, [Validators.required, Validators.maxLength(14)]],
-      Ra: [null, [Validators.required, Validators.maxLength(30)]],
-      Experiencia: [null, Validators.required]
+      nome: [null, [Validators.required, Validators.maxLength(200)]],
+      cpf:  [null, [Validators.required, Validators.maxLength(20)]],
+      login: [null, [Validators.required, Validators.maxLength(30)]],
+      senha: [null, [Validators.required, Validators.maxLength(20)]],
+      email: [null, [Validators.required, Validators.maxLength(100), Validators.email]],
+      telefone: [null, [Validators.required, Validators.maxLength(14)]],
+      ra: [null, [Validators.required, Validators.maxLength(30)]],
+      experiencia: [null, Validators.required]
     });
   }
 
@@ -42,60 +42,60 @@ export class CadastroFreelancerComponent implements OnInit {
 
 
   ConfereCPF(): void {
-    if (this.Freelancer.get('Cpf')?.value !== null) {
-      this.cadastroFreelancerService.CPF(this.Freelancer.get('Cpf')?.value).subscribe((retorno) => {
+    if (this.Freelancer.get('cpf')?.value !== null) {
+      this.cadastroFreelancerService.CPF(this.Freelancer.get('cpf')?.value).subscribe((retorno) => {
         if (retorno !== null) {
           this.snak.open('CPF já cadastrado!', 'X', {
             duration: 2000,
             horizontalPosition: 'right',
             verticalPosition: 'top',
           });
-          this.Freelancer.get('Cpf')?.setValue(null);
+          this.Freelancer.get('cpf')?.setValue(null);
         }
       });
     }
   }
 
   ConfereLogin(): void {
-    if (this.Freelancer.get('Login')?.value !== null) {
-      this.cadastroFreelancerService.Login(this.Freelancer.get('Login')?.value).subscribe((retorno) => {
+    if (this.Freelancer.get('login')?.value !== null) {
+      this.cadastroFreelancerService.Login(this.Freelancer.get('login')?.value).subscribe((retorno) => {
         if (retorno !== null) {
           this.snak.open('Login já cadastrado!', 'X', {
             duration: 2000,
             horizontalPosition: 'right',
             verticalPosition: 'top',
           });
-          this.Freelancer.get('Login')?.setValue(null);
+          this.Freelancer.get('login')?.setValue(null);
         }
       });
     }
   }
 
   ConfereEmail(): void {
-    if (this.Freelancer.get('Email')?.value !== null) {
-      this.cadastroFreelancerService.Email(this.Freelancer.get('Email')?.value).subscribe((retorno) => {
+    if (this.Freelancer.get('email')?.value !== null) {
+      this.cadastroFreelancerService.Email(this.Freelancer.get('email')?.value).subscribe((retorno) => {
         if (retorno !== null) {
           this.snak.open('Email já cadastrado!', 'X', {
             duration: 2000,
             horizontalPosition: 'right',
             verticalPosition: 'top',
           });
-          this.Freelancer.get('Email')?.setValue(null);
+          this.Freelancer.get('email')?.setValue(null);
         }
       });
     }
   }
 
   ConfereRa(): void {
-    if (this.Freelancer.get('Ra')?.value !== null) {
-      this.cadastroFreelancerService.Ra(this.Freelancer.get('Ra')?.value).subscribe((retorno) => {
+    if (this.Freelancer.get('ra')?.value !== null) {
+      this.cadastroFreelancerService.Ra(this.Freelancer.get('ra')?.value).subscribe((retorno) => {
         if (retorno !== null) {
           this.snak.open('Ra já cadastrado!', 'X', {
             duration: 2000,
             horizontalPosition: 'right',
             verticalPosition: 'top',
           });
-          this.Freelancer.get('Ra')?.setValue(null);
+          this.Freelancer.get('ra')?.setValue(null);
         }
       });
     }

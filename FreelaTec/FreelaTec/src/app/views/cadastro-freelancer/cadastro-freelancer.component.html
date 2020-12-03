@@ -5,16 +5,16 @@
   <form [formGroup]="Freelancer" class="centralizar" (ngSubmit)="cadastrar()">
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Nome</mat-label>
-      <input matInput type="text"  formControlName="Nome" >
+      <input matInput type="text"  formControlName="nome" >
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>CPF</mat-label>
-      <input matInput type="text" formControlName="Cpf" (blur)="ConfereCPF()"  mask="000.000.000-00" >
+      <input matInput type="text" formControlName="cpf" (blur)="ConfereCPF()"  mask="000.000.000-00" >
     </mat-form-field>
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Login</mat-label>
-      <input matInput type="text"  (blur)="ConfereLogin()" formControlName="Login">
+      <input matInput type="text"  (blur)="ConfereLogin()" formControlName="login">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
@@ -23,17 +23,17 @@
     </mat-form-field>
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>E-mail</mat-label>
-      <input matInput type="email" (blur)="ConfereEmail()" formControlName="Email">
+      <input matInput type="email" (blur)="ConfereEmail()" formControlName="email">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco">
       <mat-label>Telefone</mat-label>
-      <input matInput type="tel" mask="(00) 0000-0000||(00) 0 0000-0000" formControlName="Telefone">
+      <input matInput type="tel" mask="(00) 0000-0000||(00) 0 0000-0000" formControlName="telefone">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco" >
       <mat-label>Ra</mat-label>
-      <input matInput type="text" (blur)="ConfereRa()" formControlName="Ra">
+      <input matInput type="text" (blur)="ConfereRa()" formControlName="ra">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="espaco" style="width: 80%">

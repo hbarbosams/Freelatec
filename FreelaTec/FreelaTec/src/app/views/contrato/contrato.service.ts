@@ -9,7 +9,7 @@ import {ProjetosItem} from '../../../Models/Projeto';
 })
 export class ContratoService {
   urlListaProjetos = environment.API + 'Projeto/Lista';
-  lista: ProjetosItem[];
+  lista: ProjetosItem[] = [];
   constructor(private http: HttpClient) { }
 
   listaProjetos(): Observable<any>{    // @ts-ignore
@@ -18,8 +18,14 @@ export class ContratoService {
 
   adicionaprojeto(item: ProjetosItem): void {
     this.lista.push(item);
-    this.projetoComponent.ngOnInit();
-    console.log(this.lista);
 }
+
+  criaNovoContrato(): Observable<any>{    // @ts-ignore
+    return  this.http.get<any>(this.urlListaProjetos);
+  }
+
+
+
+
 
 }

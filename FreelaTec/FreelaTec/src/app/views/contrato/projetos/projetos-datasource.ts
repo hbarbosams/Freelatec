@@ -1,9 +1,9 @@
-import { DataSource } from '@angular/cdk/collections';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { map } from 'rxjs/operators';
-import { Observable, of as observableOf, merge } from 'rxjs';
-import { ProjetosItem } from '../../../../Models/Projeto';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {map} from 'rxjs/operators';
+import {merge, Observable, of as observableOf} from 'rxjs';
+import {ProjetosItem} from '../../../../Models/Projeto';
+import {ContratoService} from '../contrato.service';
 
 
 /**
@@ -12,12 +12,10 @@ import { ProjetosItem } from '../../../../Models/Projeto';
  * (including sorting, pagination, and filtering).
  */
 export class ProjetosDataSource {
-  data: ProjetosItem[];
+  data: ProjetosItem[] ;
   paginator: MatPaginator;
   sort: MatSort;
-
-  constructor() {
-
+  constructor(){
   }
 
   /**
@@ -66,7 +64,7 @@ export class ProjetosDataSource {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'nome': return compare(a.nome, b.nome, isAsc);
+        case 'descricaoProjeto': return compare(a.descricaoProjeto, b.descricaoProjeto, isAsc);
         case 'valor': return compare(+a.valor, +b.valor, isAsc);
         default: return 0;
       }

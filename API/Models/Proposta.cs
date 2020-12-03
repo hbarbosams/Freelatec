@@ -8,15 +8,15 @@ namespace API.Models
 {
     public class Proposta
     {
-        public double TotalProposto{ get; set; }
-        public string Descricao{ get; set; }
-        public DateTime Prazo { get; set; }
+        public double totalProposto{ get; set; }
+        public string descricao{ get; set; }
+        public DateTime prazo { get; set; }
 
         public Proposta()
         {
-            TotalProposto = 0;
-            Descricao = null;
-            Prazo = DateTime.Today;
+            totalProposto = 0;
+            descricao = null;
+            prazo = DateTime.Today;
         }
     }
 }

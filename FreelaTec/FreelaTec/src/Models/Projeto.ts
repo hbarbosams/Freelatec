@@ -1,6 +1,6 @@
-export interface ProjetosItem {
+export class ProjetosItem {
   idProjeto: number;
-  descricao: string;
+  descricaoProjeto: string;
   valor: number;
-  nome: string;
+  descricaoServico: string;
 }

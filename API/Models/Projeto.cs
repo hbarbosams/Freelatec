@@ -7,13 +7,13 @@ namespace API.Models
 {
     public class Projeto
     {
-        public int? IdProjeto{ get; set; }
-        public string Descricao{ get; set; }
+        public int? idProjeto{ get; set; }
+        public string descricao{ get; set; }
 
         public Projeto()
         {
-            IdProjeto = 0;
-            Descricao = null;
+            idProjeto = 0;
+            descricao = null;
         }
     }
 }
