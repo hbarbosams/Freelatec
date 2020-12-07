@@ -2,7 +2,7 @@
   <mat-card-title>Novo Contrato</mat-card-title>
 
   <mat-grid-list cols="2" rowHeight="1:1">
-    <mat-grid-tile>
+    <mat-grid-tile  style="scroll-behavior: auto;">
       <div class="block">
 
         <form [formGroup]="formContrato" >
@@ -11,15 +11,12 @@
         <mat-label >Descrição do Contrato</mat-label>
         <textarea matInput autofocus formControlName="descricao" ></textarea>
       </mat-form-field>
-
       <mat-form-field appearance="fill" style="width: 100%">
         <mat-label>Escolha a data de Entrega</mat-label>
         <input matInput [matDatepicker]="picker" formControlName="data">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-
-
         </form>
       <form  [formGroup]="item" (ngSubmit)="adiciona()">
 
@@ -47,7 +44,7 @@
           <textarea matInput formControlName="descricao" spellcheck="true"></textarea>
         </mat-form-field>
 
-        <button type="submit" mat-raised-button color="primary" style="margin-bottom: 30px; width: 100%"
+        <button type="submit" mat-raised-button color="primary" [disabled]="!item.valid" style="margin-bottom: 30px; width: 100%"
                 class="espaco"><mat-icon>add</mat-icon>Adicionar</button>
       </form>
       </div>
@@ -64,6 +61,8 @@
 <button type="submit" mat-raised-button color="primary"
         style="margin-bottom: 80px; width: 100%; height: 50px" [disabled]="!formContrato.valid" (click)="criaContrato()"
         ><mat-icon>post_add</mat-icon>Criar Contrato</button>
+
+<mat-card-title>Valor Total do contrato: {{this.total|currency: 'BRL'}}</mat-card-title>
 
 <button type="submit" mat-raised-button color="warn"
         style="margin-bottom: 80px; width: 100%; height: 50px" (click)="voltar()"

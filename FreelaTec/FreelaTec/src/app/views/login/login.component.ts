@@ -42,11 +42,16 @@ export class LoginComponent implements OnInit {
         if (dados.cnpj == null){
           this.loginService.freelancer = dados;
           this.loginService.login = dados.id;
+          this.loginService.autentica = true;
+          this.loginService.freela = true;
+          this.loginService.user = dados.nome;
           this.router.navigate(['HomeFreelancer']);
         } else {
           if (dados.cpf == null) {
             this.loginService.contratante = dados;
             this.loginService.login = dados.id;
+            this.loginService.autentica = true;
+            this.loginService.contrat = true;
             this.router.navigate(['HomeContratante']);
           }
         }

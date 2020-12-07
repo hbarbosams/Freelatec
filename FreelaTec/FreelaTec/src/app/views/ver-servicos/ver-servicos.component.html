@@ -23,7 +23,11 @@
     <mat-list-item role="listitem" *ngFor="let projeto of listProjetos">
       Descrição: {{projeto.descricaoServico}} <br>
       Valor: {{projeto.valor|currency: 'BRL'}}
+      <mat-divider></mat-divider>
     </mat-list-item>
   </mat-list>
-  <button mat-raised-button color="primary" style="background-color: green" (click)="pegarContrato()" ><mat-icon>code</mat-icon> Pegar Contrato</button>
+  <button mat-raised-button color="primary" style="background-color: green; margin-top: 20px" (click)="pegarContrato()" ><mat-icon>code</mat-icon> Pegar Contrato</button>
+  <br>
+  <br>
+  <button mat-raised-button color="warn" (click)="voltar()" ><mat-icon>undo</mat-icon> Voltar</button>
 </mat-card>

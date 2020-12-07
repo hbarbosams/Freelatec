@@ -11,6 +11,7 @@ import {ListaContratosComponent} from './views/lista-contratos/lista-contratos.c
 import {VerServicosComponent} from './views/ver-servicos/ver-servicos.component';
 import {VerFreelaComponent} from './views/home-contratante/ver-freela/ver-freela.component';
 import {EditarComponent} from './views/editar/editar.component';
+import {GuardsService} from './guards/guards.service';
 
 const routes: Routes = [
   {path: '',
@@ -18,11 +19,13 @@ const routes: Routes = [
   },
   {
     path: 'HomeContratante',
-    component: HomeContratanteComponent
+    component: HomeContratanteComponent,
+    canActivate: [GuardsService]
   },
   {
     path: 'HomeFreelancer',
-    component: HomeFreelancerComponent
+    component: HomeFreelancerComponent,
+    canActivate: [GuardsService]
   },
   {
     path: 'Cadastro',
@@ -30,7 +33,8 @@ const routes: Routes = [
   },
   {
     path: 'Contrato',
-    component: ContratoComponent
+    component: ContratoComponent,
+    canActivate: [GuardsService]
   },
   {
     path: 'CadastroEmpresa',
@@ -42,19 +46,23 @@ const routes: Routes = [
   },
   {
     path: 'ContratosLista',
-    component: ListaContratosComponent
+    component: ListaContratosComponent,
+    canActivate: [GuardsService]
   },
   {
     path: 'VerContrato',
-    component: VerServicosComponent
+    component: VerServicosComponent,
+    canActivate: [GuardsService]
   },
   {
     path: 'VerFreela',
-    component: VerFreelaComponent
+    component: VerFreelaComponent,
+    canActivate: [GuardsService]
   },
   {
     path: 'Editar',
-    component: EditarComponent
+    component: EditarComponent,
+    canActivate: [GuardsService]
   }
 ];
 

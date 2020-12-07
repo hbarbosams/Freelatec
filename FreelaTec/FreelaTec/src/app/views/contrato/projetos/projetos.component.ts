@@ -17,7 +17,7 @@ export class ProjetosComponent implements AfterViewInit, OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<ProjetosItem>;
   dataSource: ProjetosDataSource;
-  contagem: number;
+  contagem = 0 ;
 
   constructor(public contratoService: ContratoService) {
   }

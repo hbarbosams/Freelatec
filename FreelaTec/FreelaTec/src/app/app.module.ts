@@ -47,6 +47,7 @@ import {VerServicosComponent} from './views/ver-servicos/ver-servicos.component'
 import { TabelafreelancerComponent } from './views/home-freelancer/tabelafreelancer/tabelafreelancer.component';
 import { VerFreelaComponent } from './views/home-contratante/ver-freela/ver-freela.component';
 import { EditarComponent } from './views/editar/editar.component';
+import {GuardsService} from './guards/guards.service';
 
 registerLocaleData(localePt);
 const maskConfig: Partial<IConfig> = {
@@ -110,7 +111,7 @@ const maskConfig: Partial<IConfig> = {
   providers: [{
     provide: LOCALE_ID,
     useValue: 'pt-BR'
-  }],
+  }, GuardsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

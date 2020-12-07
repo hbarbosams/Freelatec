@@ -9,5 +9,9 @@ export class LoginService {
   public freelancer: Freelancer;
   public contratante: ContratanteModel;
   public login: number;
+  public autentica = false;
+  public freela = false;
+  public contrat = false;
+  public user: string;
   constructor() { }
 }

@@ -2,27 +2,32 @@
   <mat-sidenav #drawer class="sidenav cordabarra" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar class="textobranco"><mat-icon>list</mat-icon>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item routerLink="" class="textobranco"><mat-icon class="espaco">login</mat-icon> Login</a>
-      <a mat-list-item routerLink="Home" class="textobranco"><mat-icon class="espaco">home</mat-icon>Home</a>
-      <a mat-list-item routerLink="Contrato" class="textobranco"><mat-icon class="espaco">addchart</mat-icon>Contrato</a>
+      [opened]="(isHandset$ | async) === false" >
+    <mat-toolbar class="textobranco"><span class="material-icons">list</span>Menu</mat-toolbar>
+    <mat-nav-list >
+      <a mat-list-item routerLink="HomeContratante" *ngIf="loginService.contrat" class="textobranco"><mat-icon class="espaco">home</mat-icon>Home</a>
+      <a mat-list-item routerLink="HomeFreelancer" *ngIf="loginService.freela" class="textobranco"><mat-icon class="espaco">home</mat-icon>Home</a>
+      <a mat-list-item routerLink="Contrato" class="textobranco" *ngIf="loginService.contrat"><mat-icon class="espaco">addchart</mat-icon>Novo Contrato</a>
+      <a mat-list-item routerLink="ContratosLista" class="textobranco" *ngIf="loginService.freela"><mat-icon class="espaco">addchart</mat-icon>Lista Contratos</a>
+      <button mat-raised-button  *ngIf="loginService.autentica" color="warn" style="position: absolute; bottom: 0px;width:100%; border-radius: 0 " (click)="sair()" ><mat-icon>
+        exit_to_app</mat-icon>Sair</button>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" class="mat-elevation-z6">
+    <mat-toolbar color="primary" class="mat-elevation-z6" >
       <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
+        <span class="material-icons" aria-label="Side nav toggle icon">menu</span>
       </button>
-      <span>FreelaTec</span>
+      <img src="assets/Freela%20tec.png" style="height: 50px; border-radius: 5px; position: absolute; right: 20px;" class="mat-elevation-z10">
+
     </mat-toolbar>
    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<mat-card></mat-card>
+

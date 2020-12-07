@@ -21,6 +21,7 @@ export class HomeFreelancerComponent implements OnInit {
   ngOnInit(): void {
     this.serviceFreelancer.buscacadastro(this.loginService.freelancer.id).subscribe((resultados) => {
       this.dadosCadastrais = resultados;
+      this.loginService.user = resultados.nome;
     });
   }
 

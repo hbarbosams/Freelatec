@@ -48,7 +48,7 @@ export class ContratoComponent implements OnInit {
 
   adiciona(): void {
     this.novoItem =  new Servico();
-    this.novoItem.descricaoProjeto = this.item.get('projeto')?.value.descricao;
+    this.novoItem.descricaoProjeto = this.item.get('projeto')?.value.descricaoProjeto;
     this.novoItem.idProjeto = this.item.get('projeto')?.value.idProjeto;
     this.novoItem.valor = this.item.get('valor')?.value;
     this.total += this.item.get('valor')?.value * 1;
@@ -59,6 +59,13 @@ export class ContratoComponent implements OnInit {
       horizontalPosition: 'right',
       verticalPosition: 'top',
     });
+
+    const pos = this.ListaProjetos.indexOf(this.item.get('projeto')?.value);
+    this.ListaProjetos.splice(pos, 1);
+    this.item.get('projeto')?.setValue(null);
+    this.item.get('valor')?.setValue(null);
+    this.item.get('descricao')?.setValue(null);
+
 }
   criaContrato(): void {
     this.contrato.contratanteid = this.login.contratante.id;

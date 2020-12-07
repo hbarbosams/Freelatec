@@ -24,8 +24,8 @@ export class HomeContratanteComponent implements OnInit {
 
     this.contService.buscacadastro(this.loginService.contratante.id).subscribe((dados) => {
       this.dadosCadastrais = dados;
+      this.loginService.user = dados.nome;
     });
-
   }
   criacontrato(): void{
     this.route.navigate(['Contrato']);

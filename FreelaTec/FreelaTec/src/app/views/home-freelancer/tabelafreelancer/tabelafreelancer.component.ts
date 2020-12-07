@@ -23,7 +23,7 @@ export class TabelafreelancerComponent implements AfterViewInit, OnInit {
 
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['dataContrato', 'prazo', 'total', 'descricao'];
+  displayedColumns = ['dataContrato', 'prazo', 'total', 'descricao', 'acao'];
 
   constructor(private listacontratoServive: ListaContratoService, private loginService: LoginService) {
   }
@@ -45,6 +45,12 @@ export class TabelafreelancerComponent implements AfterViewInit, OnInit {
       this.dataSource.data = lista;
       this.itens = this.dataSource.data.length;
       this.ngAfterViewInit();
+    });
+  }
+  pronto(contrato: Contrato): void {
+    contrato.status = 3;
+    this.listacontratoServive.finalizaContrato(contrato).subscribe(() => {
+      this.listaContratos();
     });
   }
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import {LoginService} from '../../views/login/login.service';
 
 @Component({
   selector: 'app-navegacao',
@@ -16,6 +17,9 @@ export class NavegacaoComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, public loginService: LoginService) {}
 
+  sair(): void{
+    document.location.reload();
+  }
 }

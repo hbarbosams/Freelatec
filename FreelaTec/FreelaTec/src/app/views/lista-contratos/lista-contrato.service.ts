@@ -44,6 +44,10 @@ export class ListaContratoService {
     return  this.http.post<any>(this.urlPegacontrato, this.verContrato);
   }
 
+  finalizaContrato(contrato: Contrato): Observable<any> {
+    return  this.http.post<any>(this.urlPegacontrato, contrato);
+  }
+
   deletarContrato(contrato: Contrato): Observable<any> {
 
     // @ts-ignore

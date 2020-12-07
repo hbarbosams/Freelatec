@@ -32,4 +32,8 @@ export class VerServicosComponent implements OnInit {
     });
   }
 
+  voltar(): void {
+    this.router.navigate(['ContratosLista']);
+  }
+
 }

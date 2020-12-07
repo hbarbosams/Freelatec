@@ -20,6 +20,7 @@ export class ContratoService {
   }
 
   adicionaprojeto(item: Servico): void {
+    console.log(item);
     this.lista.push(item);
 }
 
