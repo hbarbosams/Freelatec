@@ -1,6 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {LoginService} from '../login/login.service';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { LoginService } from '../login/login.service';
+import { ContratanteModel } from './../../../Models/Contratante';
+import { HomeContServiceService } from './home-cont-service.service';
+import {EditarService} from '../editar/editar.service';
 
 @Component({
   selector: 'app-home-contratante',
@@ -8,18 +12,28 @@ import {Router} from '@angular/router';
   styleUrls: ['./home-contratante.component.css']
 })
 export class HomeContratanteComponent implements OnInit {
+  // tslint:disable-next-line: new-parens
+  dadosCadastrais = new ContratanteModel;
 
   constructor(public loginService: LoginService,
-              private route: Router) { }
+              private route: Router,
+              private contService: HomeContServiceService,
+              private editarService: EditarService) { }
 
   ngOnInit(): void {
 
-  }
+    this.contService.buscacadastro(this.loginService.contratante.id).subscribe((dados) => {
+      this.dadosCadastrais = dados;
+    });
 
+  }
   criacontrato(): void{
     this.route.navigate(['Contrato']);
   }
 
-
+  editar(): void{
+    this.editarService.rota = 'HomeContratante';
+    this.route.navigate(['Editar']);
+  }
 
 }

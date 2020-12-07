@@ -113,6 +113,42 @@ namespace API.Data
             return freelancer;
         }
 
+         public Freelancer LerDados(int id)
+        {
+            Freelancer freelancer  = null;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connectionDB;
+
+            cmd.CommandText = @"SELECT * FROM Pessoa, freelancer WHERE Id = @id AND Pessoa.id = freelancer.freelancer_id";
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            // verifica se apos a consulta retornou um registro
+            if (reader.Read())
+            {
+                // Instancia o objeto cliente outra forma de ler
+                freelancer = new Freelancer
+                {
+                    id = (int)reader["Id"],
+                    nome = (string)reader["Nome"],
+                    cpf = (string)reader["Cpf"],
+                    login = (string)reader["Login"],
+                    senha = (string)reader["Senha"],
+                    status = (int)reader["Status"],
+                    telefone = (string)reader["Telefone"],
+                    qtdProjetos = (int)reader["QtdProjetos"],
+                    mediaNota = (decimal)reader["MediaNota"],
+                    email = (string)reader["Email"],
+                    ra = (string)reader["Ra"],
+                    experiencia = (string)reader["Experiencia"]
+                };
+            }
+            return freelancer;
+        }
+
 
  
         public Freelancer Read(string login)

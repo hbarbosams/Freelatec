@@ -2,8 +2,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {map} from 'rxjs/operators';
 import {merge, Observable, of as observableOf} from 'rxjs';
-import {ProjetosItem} from '../../../../Models/Projeto';
-import {ContratoService} from '../contrato.service';
+import {Servico} from '../../../../Models/servico';
 
 
 /**
@@ -12,7 +11,7 @@ import {ContratoService} from '../contrato.service';
  * (including sorting, pagination, and filtering).
  */
 export class ProjetosDataSource {
-  data: ProjetosItem[] ;
+  data: Servico[] ;
   paginator: MatPaginator;
   sort: MatSort;
   constructor(){
@@ -23,7 +22,7 @@ export class ProjetosDataSource {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<ProjetosItem[]> {
+  connect(): Observable<Servico[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [
@@ -41,13 +40,14 @@ export class ProjetosDataSource {
    *  Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
+  // tslint:disable-next-line:typedef
   disconnect() {}
 
   /**
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: ProjetosItem[]) {
+  private getPagedData(data: Servico[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
   }
@@ -56,7 +56,7 @@ export class ProjetosDataSource {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: ProjetosItem[]) {
+  private getSortedData(data: Servico[]) {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }
@@ -65,7 +65,8 @@ export class ProjetosDataSource {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
         case 'descricaoProjeto': return compare(a.descricaoProjeto, b.descricaoProjeto, isAsc);
-        case 'valor': return compare(+a.valor, +b.valor, isAsc);
+        case 'valor': // @ts-ignore
+          return compare(+a.valor, +b.valor, isAsc);
         default: return 0;
       }
     });

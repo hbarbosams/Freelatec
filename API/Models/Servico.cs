@@ -5,15 +5,18 @@ using System.Threading.Tasks;
 
 namespace API.Models
 {
-    public class Servico
+    public class Servico : Projeto
     {
-        public double valor { get; set; }
-        public string descricao{ get; set; }
+
+        public int contratonr { get; set; }
+        public decimal valor { get; set; }
+        public string descricaoServico{ get; set; }
 
         public Servico()
         {
+            contratonr = 0;
             valor = 0;
-            descricao = null;
+            descricaoServico = null;
         }
     }
 }

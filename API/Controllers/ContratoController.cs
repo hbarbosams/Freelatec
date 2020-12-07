@@ -9,41 +9,69 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/Contrato/[controller]")]
     [ApiController]
 
 
     public class ContratoController : Controller
     {
-
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
-
+        [Route("api/[controller]/Create")]
         [HttpPost]
-        public IActionResult Create(IFormCollection contrato, int id)
+        public IActionResult Create([FromBody] Contrato contrato)
         {
-            string descricao = contrato["descricao"];
+            Contrato novoContrato = new Contrato();
+             using (var data = new ContratoData())
+             novoContrato = data.Create(contrato);
 
-
-            if (descricao.Length < 20)
-            {
-                ViewBag.Mensagem1 = "Descrição deve conter 20 ou mais caracteres";
-                return View();
-            }
-            var novoContrato = new Contrato();
-            novoContrato.descricao = contrato["descricao"];
-            novoContrato.status = 1;
-            novoContrato.notaContratante = 0;
-            novoContrato.notaFreelancer = 0;
-            novoContrato.Id = id;
+             return Ok(novoContrato);
+    }
+        [Route("api/[controller]/CreateProjetos")]
+        [HttpPost]
+        public IActionResult CreateProjetos([FromBody] List<Projeto> projetos)
+        {
             
+             using (var data = new ServicoData())
+             foreach (Projeto i in projetos ){
 
+             }
+             return Ok();
+    }
+
+        [Route("api/[controller]/Lista")]
+        [HttpGet]
+        public async Task<IActionResult> Lista()
+        {   
+            Contrato novoContrato = new Contrato();
             using (var data = new ContratoData())
-                data.Create(novoContrato);
-            return View("../Servico/Index");
+             return Ok(data.Read());
+             
+    }
+
+        [Route("api/[controller]/ListaFreelancer")]
+        [HttpGet]
+        public async Task<IActionResult> ListaFreelancer(int id)
+        {   
+            Contrato novoContrato = new Contrato();
+            using (var data = new ContratoData())
+             return Ok(data.ReadFreelancer(id));
+             
+    }
+      [Route("api/[controller]/Update")]
+      [HttpPost]
+        public async Task<IActionResult> Update([FromBody] Contrato contrato)
+        {   
+            using (var data = new ContratoData())
+            data.Update(contrato);
+             return Ok(contrato);
         }
+
+        [Route("api/[controller]/Delete")]
+        [HttpPost]
+        public async Task<IActionResult> Delete([FromBody] Contrato contrato)
+        {   
+            using (var data = new ContratoData())
+            data.Delete(contrato);
+             return Ok(contrato);
+        }
+
     }
 }

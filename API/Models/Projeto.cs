@@ -8,12 +8,12 @@ namespace API.Models
     public class Projeto
     {
         public int? idProjeto{ get; set; }
-        public string descricao{ get; set; }
+        public string descricaoProjeto{ get; set; }
 
         public Projeto()
         {
             idProjeto = 0;
-            descricao = null;
+            descricaoProjeto = null;
         }
     }
 }

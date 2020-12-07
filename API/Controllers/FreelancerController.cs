@@ -61,5 +61,16 @@ namespace API.Controllers
              freelancer = data.Ra(ra);
             return Ok(freelancer);
          }
+
+        [Route("api/[controller]/Read")]
+        [HttpGet]        
+         public IActionResult Read(int id)
+        {
+             Freelancer resultado = new Freelancer();
+                using (var data = new FreelancerData())
+                resultado = data.LerDados(id);
+                return  Ok(resultado);
+        }
+
     }
 }

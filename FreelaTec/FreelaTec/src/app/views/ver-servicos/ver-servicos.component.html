@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title>Contrato nr {{listaContratos.verContrato.nrContrato}}</mat-card-title>
+
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-list role="list">
+        <mat-list-item ><mat-icon class="icone">code</mat-icon>Nr do Contrato: {{listaContratos.verContrato.nrContrato}}</mat-list-item>
+        <mat-list-item ><mat-icon class="icone">today</mat-icon>Data de Criação: {{listaContratos.verContrato.dataContrato|date: 'dd/MM/yy'}}</mat-list-item>
+        <mat-list-item ><mat-icon class="icone">event</mat-icon>Prazo: {{listaContratos.verContrato.prazo|date: 'dd/MM/yy'}}</mat-list-item>
+        <mat-list-item ><mat-icon class="icone">local_atm</mat-icon>Total: {{listaContratos.verContrato.total|currency: 'BRL'}}</mat-list-item>
+      </mat-list>
+    </mat-grid-tile>
+    <mat-grid-tile style=" background-color: #3F51B5; color: white; border-radius: 10px">
+      <div style="display: flex; flex-direction: column; margin: 20px">
+      <mat-card-title style="color: white">Descrição:</mat-card-title>
+      <br>
+      <span style="text-align: justify">{{listaContratos.verContrato.descricao}}</span>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+    <mat-list role="list">
+      <mat-card-title>Serviços</mat-card-title>
+    <mat-list-item role="listitem" *ngFor="let projeto of listProjetos">
+      Descrição: {{projeto.descricaoServico}} <br>
+      Valor: {{projeto.valor|currency: 'BRL'}}
+    </mat-list-item>
+  </mat-list>
+  <button mat-raised-button color="primary" style="background-color: green" (click)="pegarContrato()" ><mat-icon>code</mat-icon> Pegar Contrato</button>
+</mat-card>

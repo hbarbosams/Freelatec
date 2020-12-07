@@ -145,23 +145,14 @@ namespace API.Data
 
             cmd.Connection = connectionDB;
 
-            cmd.CommandText = @"UPDATE Pessoa
-                                    SET  Nome = @nome, Login = @login, Senha = @senha,
-                                    Status = @status, Telefone = @telefone,
-                                    QtdProjetos = @qtdprojetos, MediaNota = @medianota, Email = @email
-                                    WHERE Id = @id";
+            cmd.CommandText = @"exec UpdatePessoa @id, @nome, @login, @senha, @email, @telefone";
 
             cmd.Parameters.AddWithValue("@id", pessoa.id);
             cmd.Parameters.AddWithValue("@nome", pessoa.nome);
             cmd.Parameters.AddWithValue("@login", pessoa.login);
             cmd.Parameters.AddWithValue("@senha", pessoa.senha);
-            cmd.Parameters.AddWithValue("@status", pessoa.status);
             cmd.Parameters.AddWithValue("@telefone", pessoa.telefone);
-            cmd.Parameters.AddWithValue("@qtdprojetos", pessoa.qtdProjetos);
-            cmd.Parameters.AddWithValue("@medianota", pessoa.mediaNota);
             cmd.Parameters.AddWithValue("@email", pessoa.email);
-            
-
             cmd.ExecuteNonQuery();
         }
 

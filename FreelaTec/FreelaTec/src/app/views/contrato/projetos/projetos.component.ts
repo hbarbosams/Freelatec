@@ -40,7 +40,7 @@ export class ProjetosComponent implements AfterViewInit, OnInit {
   atualizar(): void{
     // @ts-ignore
     this.dataSource = new ProjetosDataSource();
-
+    this.dataSource.data = this.contratoService.lista;
     this.ngAfterViewInit();
   }
 }

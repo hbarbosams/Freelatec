@@ -4,6 +4,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {ContratanteModel} from '../../../Models/Contratante';
 import {environment} from '../../../environments/environment';
+import {Freelancer} from '../../../Models/Freelancer';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ import {environment} from '../../../environments/environment';
 export class CadastroEmpresaService {
   urlCreate = environment.API + 'Contratante/Create';
   urlCNPJ = environment.API + 'Contratante/CNPJ';
+  dadosCadastrais = new Freelancer();
   constructor(private router: Router, private http: HttpClient) { }
   // @ts-ignore
   create(contratante: any): Observable<any> {

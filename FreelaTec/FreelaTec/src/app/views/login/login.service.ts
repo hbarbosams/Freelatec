@@ -8,5 +8,6 @@ import {ContratanteModel} from '../../../Models/Contratante';
 export class LoginService {
   public freelancer: Freelancer;
   public contratante: ContratanteModel;
+  public login: number;
   constructor() { }
 }

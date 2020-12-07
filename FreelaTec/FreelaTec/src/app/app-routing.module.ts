@@ -7,6 +7,10 @@ import {HomeFreelancerComponent} from './views/home-freelancer/home-freelancer.c
 import {ContratoComponent} from './views/contrato/contrato.component';
 import {CadastroEmpresaComponent} from './views/cadastro-empresa/cadastro-empresa.component';
 import {CadastroFreelancerComponent} from './views/cadastro-freelancer/cadastro-freelancer.component';
+import {ListaContratosComponent} from './views/lista-contratos/lista-contratos.component';
+import {VerServicosComponent} from './views/ver-servicos/ver-servicos.component';
+import {VerFreelaComponent} from './views/home-contratante/ver-freela/ver-freela.component';
+import {EditarComponent} from './views/editar/editar.component';
 
 const routes: Routes = [
   {path: '',
@@ -35,6 +39,22 @@ const routes: Routes = [
   {
     path: 'CadastroFreelancer',
     component: CadastroFreelancerComponent
+  },
+  {
+    path: 'ContratosLista',
+    component: ListaContratosComponent
+  },
+  {
+    path: 'VerContrato',
+    component: VerServicosComponent
+  },
+  {
+    path: 'VerFreela',
+    component: VerFreelaComponent
+  },
+  {
+    path: 'Editar',
+    component: EditarComponent
   }
 ];
 

@@ -16,12 +16,10 @@ namespace API.Controllers
         [Route("api/[controller]/Read")]
         [HttpGet]        
          public IActionResult Read(int id)
-
-
         {
             var resultado = new Contratante();
                 using (var data = new ContratanteData())
-                resultado = data.Read(id);
+                resultado = data.LerDados(id);
                 return  Ok(resultado);
         }
 

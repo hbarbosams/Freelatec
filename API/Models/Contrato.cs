@@ -9,13 +9,18 @@ namespace API.Models
     {
         public int? nrContrato{ get; set; }
         public DateTime dataContrato{ get; set; }
-        public double total{ get; set; }
+        public decimal total{ get; set; }
         public string descricao { get; set; }
         public DateTime dataInicial { get; set; }
         public double notaContratante { get; set; }
         public double notaFreelancer{ get; set; }
         public DateTime prazo { get; set; }
         public int status { get; set; }
+        
+        public int contratanteid {get ; set; }
+
+        public int? freelancerid {get ; set; }
+
         public double taxa { get; set; }
 
         public Contrato()
@@ -31,7 +36,6 @@ namespace API.Models
             status = 0;  
             taxa = 0;
         }
+}
 
-        public int Id { get; set; }
-    }
 }

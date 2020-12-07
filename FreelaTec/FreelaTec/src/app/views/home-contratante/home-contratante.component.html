@@ -1,14 +1,14 @@
 <mat-card style="text-align: center" class="mat-elevation-z6">
-  <mat-card-title>Seja bem vindo, {{this.loginService.contratante.nome|titlecase}} </mat-card-title>
+  <mat-card-title>Seja bem vindo, {{this.dadosCadastrais.nome|titlecase}} </mat-card-title>
 
 
   <mat-grid-list cols="3" rowHeight="1:1">
     <mat-grid-tile>
       <mat-list role="list">
-        <mat-list-item ><mat-icon class="espaco">account_circle</mat-icon>Nome: {{this.loginService.contratante.nome|titlecase}}</mat-list-item>
-        <mat-list-item> <mat-icon class="espaco">assignment</mat-icon>CNPJ: {{this.loginService.contratante.cnpj|mask: '000.000.000-00||00.000.000/0000-00'}} </mat-list-item>
-        <mat-list-item> <mat-icon class="espaco">mail</mat-icon>Email: {{this.loginService.contratante.email}}</mat-list-item>
-        <mat-list-item> <mat-icon class="espaco">phone</mat-icon>Telefone: {{this.loginService.contratante.telefone| mask:'(00) 00000-0000||(00) 0000-0000'}}</mat-list-item>
+        <mat-list-item ><mat-icon class="icone">account_circle</mat-icon>Nome: {{this.dadosCadastrais.nome|titlecase}}</mat-list-item>
+        <mat-list-item> <mat-icon class="icone">assignment</mat-icon>CNPJ: {{this.dadosCadastrais.cnpj|mask: '000.000.000-00||00.000.000/0000-00'}} </mat-list-item>
+        <mat-list-item> <mat-icon class="icone">mail</mat-icon>Email: {{this.dadosCadastrais.email}}</mat-list-item>
+        <mat-list-item> <mat-icon class="icone">phone</mat-icon>Telefone: {{this.dadosCadastrais.telefone| mask:'(00) 00000-0000||(00) 0000-0000'}}</mat-list-item>
       </mat-list>
     </mat-grid-tile>
     <mat-grid-tile>
@@ -18,12 +18,14 @@
     </mat-grid-tile>
     <mat-grid-tile>
       <mat-list role="list">
-      <mat-list-item> <mat-icon class="espaco">batch_prediction</mat-icon>Projetos: {{this.loginService.contratante.qtdProjetos|number}}</mat-list-item>
-      <mat-list-item> <mat-icon class="espaco">star</mat-icon>Nota: {{this.loginService.contratante.mediaNota|number}} </mat-list-item>
-      <mat-list-item> <mat-icon class="espaco">work</mat-icon>Area: {{this.loginService.contratante.areaAtuacao}}</mat-list-item>
+      <mat-list-item> <mat-icon class="icone">batch_prediction</mat-icon>Projetos: {{this.dadosCadastrais.qtdProjetos|number}}</mat-list-item>
+      <mat-list-item> <mat-icon class="icone">star</mat-icon>Nota: {{this.dadosCadastrais.mediaNota|number}} </mat-list-item>
+      <mat-list-item> <mat-icon class="icone">work</mat-icon>Area: {{this.dadosCadastrais.areaAtuacao}}</mat-list-item>
       </mat-list>
     </mat-grid-tile>
   </mat-grid-list>
+
+  <button mat-raised-button color="primary" (click)="editar()" ><mat-icon>edit</mat-icon> Editar</button>
 
 </mat-card>
 <mat-card style="margin-top: 5%">

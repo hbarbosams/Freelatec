@@ -1,15 +1,13 @@
 export class Contrato {
-  nrContrato: number;
-  dataContrato: number;
-  dataInicial: number;
-  prazo: number;
-  descricao: string;
-  total: number;
-  status: number;
-  notaContratante: number;
-  notaFreelancer: number;
-  // tslint:disable-next-line:variable-name
-  contratante_id: number | undefined;
-  // tslint:disable-next-line:variable-name
-  freelancer_id: number;
+  nrContrato?: number | undefined;
+  dataContrato?: Date | undefined;
+  dataInicial?: Date;
+  prazo?: Date| undefined;
+  descricao?: string | undefined;
+  total?: number;
+  status?: number | undefined;
+  notaContratante?: number | undefined;
+  notaFreelancer?: number | undefined;
+  contratanteid?: number | undefined;
+  freelancerid?: number | undefined;
 }

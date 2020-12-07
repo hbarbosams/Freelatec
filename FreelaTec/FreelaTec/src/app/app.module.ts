@@ -41,7 +41,12 @@ import {ContratoComponent} from './views/contrato/contrato.component';
 import {CadastroEmpresaComponent} from './views/cadastro-empresa/cadastro-empresa.component';
 import {CadastroFreelancerComponent} from './views/cadastro-freelancer/cadastro-freelancer.component';
 import {TabelaContratosComponent} from './views/home-contratante/tabela-contratos/tabela-contratos.component';
-import { ProjetosComponent } from './views/contrato/projetos/projetos.component';
+import {ProjetosComponent} from './views/contrato/projetos/projetos.component';
+import {ListaContratosComponent} from './views/lista-contratos/lista-contratos.component';
+import {VerServicosComponent} from './views/ver-servicos/ver-servicos.component';
+import { TabelafreelancerComponent } from './views/home-freelancer/tabelafreelancer/tabelafreelancer.component';
+import { VerFreelaComponent } from './views/home-contratante/ver-freela/ver-freela.component';
+import { EditarComponent } from './views/editar/editar.component';
 
 registerLocaleData(localePt);
 const maskConfig: Partial<IConfig> = {
@@ -61,7 +66,12 @@ const maskConfig: Partial<IConfig> = {
     CadastroEmpresaComponent,
     CadastroFreelancerComponent,
     TabelaContratosComponent,
-    ProjetosComponent
+    ProjetosComponent,
+    ListaContratosComponent,
+    VerServicosComponent,
+    TabelafreelancerComponent,
+    VerFreelaComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

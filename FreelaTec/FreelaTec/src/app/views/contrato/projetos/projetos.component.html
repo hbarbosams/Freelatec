@@ -1,4 +1,7 @@
 <div class="mat-elevation-z8">
+  <button mat-flat-button style="width: 100%; background-color:green;
+   color: white" (click)="atualizar()"><mat-icon>cached</mat-icon> Atualizar Projetos </button>
+
   <table mat-table class="full-width-table" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="descricaoProjeto">
@@ -30,4 +33,5 @@
   </mat-paginator>
 </div>
 
-<button mat-flat-button (click)="atualizar()"> Atualizar </button>
+
+

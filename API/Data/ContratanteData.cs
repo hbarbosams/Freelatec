@@ -40,7 +40,7 @@ namespace API.Data
             
         }
 
-        public Contratante Read(string login)
+        public Contratante Read(string id)
         {
             Contratante contratante = null;
 
@@ -50,7 +50,7 @@ namespace API.Data
 
             cmd.CommandText = @"select * from pessoa, contratante where login = @login and pessoa.id = contratante.contratante_id";
 
-            cmd.Parameters.AddWithValue("@login", login);
+            cmd.Parameters.AddWithValue("@login", id);
 
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -76,7 +76,7 @@ namespace API.Data
             return contratante;
         }
 
-        public Contratante Read(int id)
+        public Contratante LerDados(int id)
         {
             Contratante contratante = null;
 

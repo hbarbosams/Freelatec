@@ -21,7 +21,7 @@ namespace API.Data
 
             // Colocando os dados recebidos pelo objeto cliente na string sql
             cmd.Parameters.AddWithValue("@idprojeto", projeto.idProjeto);
-            cmd.Parameters.AddWithValue("@descricao", projeto.descricao);
+            cmd.Parameters.AddWithValue("@descricao", projeto.descricaoProjeto);
 
             // Execução da string qld no banco
             cmd.ExecuteNonQuery();
@@ -49,7 +49,7 @@ namespace API.Data
                     Projeto projeto= new Projeto();
 
                     projeto.idProjeto = (int)reader["IdProjeto"];
-                    projeto.descricao= (string)reader["Descricao"];
+                    projeto.descricaoProjeto = (string)reader["descricaoProjeto"];
 
                     lista.Add(projeto);
                 }
@@ -72,7 +72,7 @@ namespace API.Data
                                     WHERE Id = @id";
 
             cmd.Parameters.AddWithValue("@idprojeto", projeto.idProjeto);
-            cmd.Parameters.AddWithValue("@descricao", projeto.descricao);
+            cmd.Parameters.AddWithValue("@descricao", projeto.descricaoProjeto);
 
             //IdProjeto = 0;
             //Descricao = null;

@@ -19,14 +19,14 @@ export class CadastroEmpresaComponent implements OnInit {
   contratante: FormGroup;
   ngOnInit(): void {
     this.contratante = this.fb.group({
-      Nome: [null, [Validators.required, Validators.maxLength(200)]],
-      Cnpj: [null, [Validators.required, Validators.maxLength(20)]],
-      Login: [null, [Validators.required, Validators.maxLength(30)]],
-      Senha: [null, [Validators.required, Validators.maxLength(20)]],
-      Email: [null, [Validators.required, Validators.maxLength(100), Validators.email]],
-      Telefone: [null, [Validators.required, Validators.maxLength(14)]],
-      AreaAtuacao: [null, Validators.required],
-      DescrContratante: [null, Validators.required]
+      nome: [null, [Validators.required, Validators.maxLength(200)]],
+      cnpj: [null, [Validators.required, Validators.maxLength(20)]],
+      login: [null, [Validators.required, Validators.maxLength(30)]],
+      senha: [null, [Validators.required, Validators.maxLength(20)]],
+      email: [null, [Validators.required, Validators.maxLength(100), Validators.email]],
+      telefone: [null, [Validators.required, Validators.maxLength(14)]],
+      areaAtuacao: [null, Validators.required],
+      descrContratante: [null, Validators.required]
     });
   }
 
